@@ -15,7 +15,7 @@ export function pickQuestion(category: string) {
     const selectedQuestions: QuestionListInterface[] = []
     const selectedIndices = new Set(); // Set to track selected indices
 
-    while (selectedQuestions.length < Math.min(5, questionList.length)) {
+    while (selectedQuestions.length < 4) {
         const randomIndex = Math.floor(Math.random() * questionList.length);
 
         // Check if this index has already been selected
