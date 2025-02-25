@@ -24,4 +24,6 @@ export function pickQuestion(category: string) {
             selectedQuestions.push(questionList[randomIndex]); // Add the question to the selectedQuestions
         }
     }
+
+    return selectedQuestions;
 }
