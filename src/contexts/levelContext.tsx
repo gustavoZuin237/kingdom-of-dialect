@@ -38,8 +38,38 @@ function getQuestions(category: number) {
         questionList.push(questionOptions[getRandomNumber()])
     }
 
+    usedQuestions[category - 1].usedQuestions = questionList
+
     return questionList
 }
+
+interface UsedQuestionI {
+    category: number,
+    usedQuestions: QuestionListInterface[]
+}
+
+const usedQuestions: UsedQuestionI[] = [
+    {
+        category: 1,
+        usedQuestions: []
+    },
+    {
+        category: 2,
+        usedQuestions: []
+    },
+    {
+        category: 3,
+        usedQuestions: []
+    },
+    {
+        category: 4,
+        usedQuestions: []
+    },
+    {
+        category: 5,
+        usedQuestions: []
+    },
+]
 
 export const LevelContext = createContext({} as LevelContextI);
 
