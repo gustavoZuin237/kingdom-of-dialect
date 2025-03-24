@@ -33,11 +33,6 @@ export const InputContainer = styled.div`
     margin-bottom: 1rem;
 `
 
-export const PasswordInputContainer = styled(InputContainer)`
-    width: 100%;
-    flex-direction: row;
-`
-
 export const Input = styled.input`
     width: 100%;
     height: 25%;
@@ -55,20 +50,20 @@ export const InputLabel = styled(Title)`
 `
 
 export const ButtonTitle = styled(Title)`
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 400;
 `
 
 export const Button = styled.button`
-    width: 35px;
-    height: 35px;
+    width: 16rem;
+    height: 3rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     border: 1px solid;
-    border-radius: 12px;
+    border-radius: 6px;
 
     transition: 0.2s;
 
@@ -81,10 +76,4 @@ export const Button = styled.button`
     &:focus {
         border: 1px solid;
     }
-`
-
-export const SendButton = styled(Button)`
-    width: 7rem;
-    height: 3rem;
-    border-radius: 6px;
 `

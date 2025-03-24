@@ -6,24 +6,16 @@ export function Home() {
             <s.TitleContainer>
                 <s.Title>K.O.D: Kingdom of Dialect</s.Title>
             </s.TitleContainer>
-            
-            <s.InputContainer>
-                <s.InputTitle>Login:</s.InputTitle>
 
-                <s.Input type='text' placeholder='Insira o e-mail' />
+            <s.TitleContainer>
+                <s.Subtitle>
+                    Pronto para começar?
+                </s.Subtitle>
+            </s.TitleContainer>
 
-                <s.Input type='password' placeholder='Insira a senha' />
-
-                <s.Button>
-                    <s.ButtonTitle>
-                        Enviar
-                    </s.ButtonTitle>
-                </s.Button>
-
-                <s.RegisterLink to={"/register"}>
-                    <p>Crie uma conta</p>
-                </s.RegisterLink>
-            </s.InputContainer>
+            <s.RegisterLink to={"/register"}>
+                <p>Criar personagem</p>
+            </s.RegisterLink>
         </s.PageContainer>
     )
 }
