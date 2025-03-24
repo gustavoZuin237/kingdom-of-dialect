@@ -6,15 +6,13 @@ export interface QuestionListInterface {
 }
 
 interface QuestionInterface {
-  id: number,
-  category: string,
+  category: number,
   questionList: QuestionListInterface[],
 }
 
 export const questions: QuestionInterface[] = [
     {
-      id: 1,
-      category: "introduction",
+      category: 1,
       questionList: [
         {
             id: 1,
@@ -65,8 +63,7 @@ export const questions: QuestionInterface[] = [
       ]
     },
     {
-      id: 2,
-      category: "animals",
+      category: 2,
       questionList: [
             {
               id: 1,
@@ -108,8 +105,7 @@ export const questions: QuestionInterface[] = [
 
     },
     {
-      id: 3,
-      category: "food",
+      category: 3,
       questionList: [
             {
               id: 1,
@@ -161,8 +157,7 @@ export const questions: QuestionInterface[] = [
 
     },
     {
-      id: 4,
-      category: "clothes",
+      category: 4,
       questionList: [
             {
               id: 1,
@@ -209,8 +204,7 @@ export const questions: QuestionInterface[] = [
 
     },
     {
-      id: 5,
-      category: "family",
+      category: 5,
       questionList: [
             {
               id: 1,

@@ -1,11 +1,11 @@
 interface ExplanationsInterface {
-    category: string,
+    category: number,
     explanation: string
 }
 
 export const explanations: ExplanationsInterface[] = [
     {
-        category: "introduction",
+        category: 1,
         explanation: "Ao se apresentar em inglês, siga uma estrutura simples:\n\n" +
         '"Hi, my name is [seu nome]. I am from [seu país]. I like [hobby/interesse]."\n\n' +
         "Os verbos básicos ajudam a descrever ações e estados. Aqui estão alguns essenciais:\n\n" +
@@ -15,7 +15,7 @@ export const explanations: ExplanationsInterface[] = [
         "Aprender esses verbos e como se apresentar corretamente ajudará na comunicação básica em inglês!"
     },
     { 
-        category: "animals",
+        category: 2,
         explanation: "Os animais são uma parte essencial do vocabulário em inglês. Conhecer seus nomes e algumas características básicas ajuda na comunicação diária.\n\n" +
         "Aqui estão alguns exemplos comuns:\n\n" +
         "- **Dog** (cachorro) → 'The dog is very friendly.' (O cachorro é muito amigável.)\n" +
@@ -28,7 +28,7 @@ export const explanations: ExplanationsInterface[] = [
         "Aprender sobre os animais e suas ações tornará seu inglês mais natural e divertido!"
     },
     {
-        category: "food",
+        category: 3,
         explanation: "Saber como pedir comida em inglês é essencial para se comunicar em restaurantes e outros locais de alimentação. Aqui estão algumas frases úteis:\n\n" +
         "- 'Can I have a menu, please?' (Posso ter um menu, por favor?)\n" +
         "- 'I would like to order [dish].' (Eu gostaria de pedir [prato].)\n" +
@@ -48,7 +48,7 @@ export const explanations: ExplanationsInterface[] = [
         
     },
     {
-        category: "clothes",
+        category: 4,
         explanation: "Os termos relacionados a roupas são essenciais para descrever o que usamos diariamente. Aqui estão algumas palavras comuns e frases úteis ao falar sobre roupas:\n\n" +
         "- **Shirt** (camisa)\n" +
         "- **Pants** (calças)\n" +
@@ -63,7 +63,7 @@ export const explanations: ExplanationsInterface[] = [
         "Esses termos e frases ajudarão você a se comunicar de forma eficaz em lojas de roupas e em conversas sobre moda!"
     },
     {
-        category: "family",
+        category: 5,
         explanation: "Falar sobre a família em inglês é importante para descrever relações pessoais e conexões. Aqui estão alguns termos comuns:\n\n" +
         "- **Father** (pai)\n" +
         "- **Mother** (mãe)\n" +
