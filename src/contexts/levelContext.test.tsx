@@ -30,7 +30,7 @@ while (category < 5) {
     
     // getExplanation testing
     test("Should return the correct explanation according to the inserted category", () => {
-        expect(getExplanation(1)).toBe(explanations[0].explanation)
+        expect(getExplanation(category)).toBe(explanations[category - 1].explanation)
     })
 
     category++
