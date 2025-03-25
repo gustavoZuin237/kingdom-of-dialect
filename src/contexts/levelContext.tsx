@@ -14,7 +14,7 @@ interface LevelContextProviderProps {
     children: ReactNode
 }
 
-function getExplanation(category: number) {
+export function getExplanation(category: number) {
     const categoryExplanation = explanations.filter((explanation) => {
         return explanation.category == category
     })
@@ -22,20 +22,23 @@ function getExplanation(category: number) {
     return categoryExplanation[0].explanation
 }
 
-function getQuestions(category: number) {
+export function getQuestions(category: number) {
     const categoryQuestions = questions.filter((question) => {
         return question.category == category
     })
 
     const getRandomNumber = () => {
-        return Math.random() * 6
+        return Math.ceil(Math.random() * 5)
     };
 
     const questionOptions = categoryQuestions[0].questionList
-    const questionList = []
+    const questionList: QuestionListInterface[] = []
     
     while (questionList.length < 3) {
-        questionList.push(questionOptions[getRandomNumber()])
+        const questionToAdd = questionOptions[getRandomNumber()]
+         if (questionList.includes(questionToAdd) == false) {
+            questionList.push(questionToAdd)
+        }
     }
 
     usedQuestions[category - 1].usedQuestions = questionList
