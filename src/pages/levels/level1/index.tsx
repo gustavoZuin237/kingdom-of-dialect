@@ -1,24 +1,24 @@
-import { useContext } from 'react'
 import * as s from './styles'
 
+import { useContext } from 'react'
 import { LevelContext } from '../../../contexts/levelContext'
 
 export function Level1() {
     const levelContext = useContext(LevelContext)
 
-    const explanation = levelContext.getExplanation(1)
     const questions = levelContext.getQuestions(1)
 
    return (
         <s.PageContainer>
-            <h1>
-                Level 1
-            </h1>
+            <s.ContentContainer>
+                /* EXPLANATION */ <br /> <br /> 
 
-            <>
-                {console.log("Explicação:", explanation)}
-                {console.log("Questões:", questions)}
-            </>
+                { questions[0].question }
+            </s.ContentContainer>
+
+            <s.CharacterContainer>
+                <s.Image src='src\images\placeholder-character.png' />
+            </s.CharacterContainer>
         </s.PageContainer>
     )
 }
