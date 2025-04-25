@@ -5,6 +5,7 @@ import { QuestionListInterface } from '../data/questions';
 interface LevelContextI {
     getExplanation: (category: number) => string
     getQuestions: (category: number) => QuestionListInterface[]
+    getUsedQuestions: (category: number) => QuestionListInterface[]
 }
 
 import { explanations } from '../data/explanations';
@@ -46,6 +47,10 @@ export function getQuestions(category: number) {
     return questionList
 }
 
+export function getUsedQuestions(category: number) {
+    return usedQuestions[category - 1].usedQuestions
+}
+
 interface UsedQuestionI {
     category: number,
     usedQuestions: QuestionListInterface[]
@@ -80,7 +85,7 @@ export function LevelContextProvider({ children }: LevelContextProviderProps) {
     return (
         <LevelContext.Provider 
             value={
-                {getExplanation, getQuestions}
+                {getExplanation, getQuestions, getUsedQuestions}
             }
         >
             { children }

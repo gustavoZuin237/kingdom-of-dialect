@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { NavLink } from 'react-router-dom'
+
 export const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -54,9 +56,12 @@ export const ButtonTitle = styled(Title)`
     font-weight: 400;
 `
 
-export const Button = styled.button`
+export const Button = styled(NavLink)`
     width: 16rem;
     height: 3rem;
+
+    text-decoration: none;
+    color: black;
 
     display: flex;
     align-items: center;

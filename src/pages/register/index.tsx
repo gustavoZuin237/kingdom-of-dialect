@@ -16,7 +16,7 @@ export function Register() {
                 <s.Input type='text' placeholder='Insira seu nome...' />
             </s.InputContainer>
 
-            <s.Button onClick={submitUserRegister}>
+            <s.Button onClick={submitUserRegister} to={"/level1"}>
                 <s.ButtonTitle>
                     Começar jornada!
                 </s.ButtonTitle>
