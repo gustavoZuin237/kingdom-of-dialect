@@ -2,21 +2,35 @@ import styled from 'styled-components'
 
 export const PageContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    padding: 2rem 4rem;
+    align-items: center;
+    padding: 1rem 4rem;
 `
 
 export const ContentContainer = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
 `
 
+export const ExplanationContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`
+
+export const ExplanationHeader = styled.header``
+
+export const ExplanationMain= styled.main``
+
+export const ExplanationFooter= styled.footer``
+
+export const QuestionsContainer = styled.div``
+
 export const CharacterContainer = styled.div`
-    width: 20%;
-    height: 100%;
+    width: 12%;
 
     margin-top: 5rem;
     align-self: flex-end;
@@ -27,5 +41,5 @@ export const CharacterContainer = styled.div`
 `
 
 export const Image = styled.img`
-    width: 80%;
+    width: 100%;
 `

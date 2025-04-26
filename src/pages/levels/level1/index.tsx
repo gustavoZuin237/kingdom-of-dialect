@@ -1,23 +1,71 @@
 import * as s from './styles'
 
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { LevelContext } from '../../../contexts/levelContext'
 
 export function Level1() {
+    const [currentQuestion, setCurrentQuestion] = useState(0)
+
     const levelContext = useContext(LevelContext)
 
     const questions = levelContext.getQuestions(1)
 
+    function nextQuestion() {
+        if (currentQuestion < questions.length) {
+            setCurrentQuestion(currentQuestion + 1)
+        } else {
+            setCurrentQuestion(0)
+        }
+    }
+
    return (
         <s.PageContainer>
             <s.ContentContainer>
-                /* EXPLANATION */ <br /> <br /> 
+                <s.ExplanationContainer>
+                    <s.ExplanationHeader>
+                        <h2>Apresentações em Inglês</h2>
 
-                { questions[0].question }
+                        <p>Ao se apresentar em inglês, siga uma estrutura simples:</p>
+
+                        <blockquote>"Hi, my name is (seu nome). I am from (seu país). I like (hobby/interesse)."</blockquote>
+                    </s.ExplanationHeader>
+
+                    <s.ExplanationMain>
+                        <h2>Verbos Básicos</h2>
+
+                        <p>Os verbos básicos ajudam a descrever ações e estados. Aqui estão alguns essenciais:</p>
+
+                        <ul>
+                            <li>To be (ser/estar) → "I am a student." (Eu sou um estudante.)</li>
+                            <li>To have (ter) → "She has a book." (Ela tem um livro.)</li>
+                            <li>To like (gostar) → "They like music." (Eles gostam de música.)</li>
+                        </ul>
+                    </s.ExplanationMain>
+
+                    <s.ExplanationFooter>
+                        <p>Aprender esses verbos e como se apresentar corretamente ajudará na comunicação básica em inglês!</p>
+                    </s.ExplanationFooter>
+                </s.ExplanationContainer>
+
+                <s.QuestionsContainer>
+                    {
+                        currentQuestion < questions.length ? (
+                            <>
+                                { questions[currentQuestion].question } <br />
+                                { questions[currentQuestion].answers.map((answer) => {
+                                    return <p>{answer}</p>
+                                })}
+                            </>
+                        ) :
+                        <p>Fim</p>
+                    }
+                </s.QuestionsContainer>
+
+                <button onClick={nextQuestion}>Próxima pergunta</button>
             </s.ContentContainer>
 
             <s.CharacterContainer>
-                <s.Image src='src\images\placeholder-character.png' />
+                <s.Image src='src\images\placeholder.jpg' />
             </s.CharacterContainer>
         </s.PageContainer>
     )
