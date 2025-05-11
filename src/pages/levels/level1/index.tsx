@@ -10,11 +10,26 @@ export function Level1() {
 
     const questions = levelContext.getQuestions(1)
 
+    const username = sessionStorage.getItem("username")
+
+    console.log(username)
+
     function nextQuestion() {
         if (currentQuestion < questions.length) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
             setCurrentQuestion(0)
+        } // DELETE LATER, USED FOR TESTING!!!
+    }
+
+    function checkCorrectAnswer(answerId : number) {
+        if (questions[currentQuestion].correctAnswer == answerId) {
+            window.alert("Resposta correta!")
+            nextQuestion()
+        }
+        else {
+            window.alert("Resposta errada!")
+            nextQuestion()
         }
     }
 
@@ -53,7 +68,7 @@ export function Level1() {
                             <>
                                 { questions[currentQuestion].question } <br />
                                 { questions[currentQuestion].answers.map((answer) => {
-                                    return <p>{answer}</p>
+                                    return <button key={answer.id} onClick={() => {checkCorrectAnswer(answer.id)}}>{answer.answer}</button>
                                 })}
                             </>
                         ) :

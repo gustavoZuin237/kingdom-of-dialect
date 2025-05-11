@@ -1,8 +1,16 @@
+import { useState } from 'react';
+
 import * as s from './styles'
 
 export function Register() {
+    const [userName, setUserName] = useState<string>("");
+
+    function HandleNameChange(event: React.ChangeEvent<HTMLInputElement>) {
+        setUserName(event.target.value)
+    }
+
     function submitUserRegister() {
-        
+        sessionStorage.setItem("username", userName)
     }
 
     return (
@@ -13,7 +21,7 @@ export function Register() {
 
             <s.InputContainer>
                 <s.InputLabel>Nome do jogador</s.InputLabel>
-                <s.Input type='text' placeholder='Insira seu nome...' />
+                <s.Input type='text' placeholder='Insira seu nome...' value={userName} onChange={HandleNameChange} />
             </s.InputContainer>
 
             <s.Button onClick={submitUserRegister} to={"/level1"}>
