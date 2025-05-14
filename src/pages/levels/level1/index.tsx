@@ -2,35 +2,35 @@ import * as s from './styles'
 
 import { useContext, useState } from 'react'
 import { LevelContext } from '../../../contexts/levelContext'
+import { NavLink } from 'react-router-dom'
 
 export function Level1() {
     const [currentQuestion, setCurrentQuestion] = useState(0)
+    const [unlockNext, setUnlockNext] = useState(false)
 
     const levelContext = useContext(LevelContext)
 
     const questions = levelContext.getQuestions(1)
 
-    const username = sessionStorage.getItem("username")
-
-    console.log(username)
-
-    function nextQuestion() {
-        if (currentQuestion < questions.length) {
-            setCurrentQuestion(currentQuestion + 1)
-        } else {
-            setCurrentQuestion(0)
-        } // DELETE LATER, USED FOR TESTING!!!
-    }
+    // const username = sessionStorage.getItem("username")
 
     function checkCorrectAnswer(answerId : number) {
         if (questions[currentQuestion].correctAnswer == answerId) {
             window.alert("Resposta correta!")
+
             nextQuestion()
         }
         else {
             window.alert("Resposta errada!")
-            nextQuestion()
         }
+    }
+
+    function nextQuestion() {
+        if (currentQuestion <= questions.length) {
+            setCurrentQuestion(currentQuestion + 1)
+        } 
+
+        setUnlockNext(true)
     }
 
    return (
@@ -72,15 +72,18 @@ export function Level1() {
                                 })}
                             </>
                         ) :
-                        <p>Fim</p>
+                        
+                        unlockNext == true ? (
+                            <NavLink to={"/level2"}>Seguir para o próximo nível?</NavLink>
+                        )
+
+                        : <></>
                     }
                 </s.QuestionsContainer>
-
-                <button onClick={nextQuestion}>Próxima pergunta</button>
             </s.ContentContainer>
 
             <s.CharacterContainer>
-                <s.Image src='src\images\placeholder.jpg' />
+                <s.Image src='src\images\characters\aunt_ferret.png' />
             </s.CharacterContainer>
         </s.PageContainer>
     )

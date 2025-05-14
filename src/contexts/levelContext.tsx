@@ -2,25 +2,19 @@
 import { createContext, ReactNode } from 'react';
 
 import { QuestionListInterface } from '../data/questions';
+
+import { questions } from '../data/questions';
+
 interface LevelContextI {
-    getExplanation: (category: number) => string
     getQuestions: (category: number) => QuestionListInterface[]
     getUsedQuestions: (category: number) => QuestionListInterface[]
 }
-
-import { explanations } from '../data/explanations';
-import { questions } from '../data/questions';
-
 interface LevelContextProviderProps {
     children: ReactNode
 }
-
-export function getExplanation(category: number) {
-    const categoryExplanation = explanations.filter((explanation) => {
-        return explanation.category == category
-    })
-
-    return categoryExplanation[0].explanation
+interface UsedQuestionI {
+    category: number,
+    usedQuestions: QuestionListInterface[]
 }
 
 export function getQuestions(category: number) {
@@ -49,12 +43,7 @@ export function getQuestions(category: number) {
 
 export function getUsedQuestions(category: number) {
     return usedQuestions[category - 1].usedQuestions
-}
-
-interface UsedQuestionI {
-    category: number,
-    usedQuestions: QuestionListInterface[]
-}
+} 
 
 const usedQuestions: UsedQuestionI[] = [
     {
@@ -85,7 +74,7 @@ export function LevelContextProvider({ children }: LevelContextProviderProps) {
     return (
         <LevelContext.Provider 
             value={
-                {getExplanation, getQuestions, getUsedQuestions}
+                {getQuestions, getUsedQuestions}
             }
         >
             { children }
