@@ -4,16 +4,6 @@ interface ExplanationsInterface {
 }
 
 export const explanations: ExplanationsInterface[] = [
-    {
-        category: 1,
-        explanation: "Ao se apresentar em inglês, siga uma estrutura simples:\n\n" +
-        '"Hi, my name is [seu nome]. I am from [seu país]. I like [hobby/interesse]."\n\n' +
-        "Os verbos básicos ajudam a descrever ações e estados. Aqui estão alguns essenciais:\n\n" +
-        "- **To be** (ser/estar) → 'I *am* a student.' (Eu *sou* um estudante.)\n" +
-        "- **To have** (ter) → 'She *has* a book.' (Ela *tem* um livro.)\n" +
-        "- **To like** (gostar) → 'They *like* music.' (Eles *gostam* de música.)\n\n" +
-        "Aprender esses verbos e como se apresentar corretamente ajudará na comunicação básica em inglês!"
-    },
     { 
         category: 2,
         explanation: "Os animais são uma parte essencial do vocabulário em inglês. Conhecer seus nomes e algumas características básicas ajuda na comunicação diária.\n\n" +
