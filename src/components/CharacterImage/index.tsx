@@ -8,6 +8,10 @@ export function CharacterImage({level} : CharacterImagePropsI) {
     let imageSrc = ''
 
     switch (level) {
+        case 0:
+            imageSrc = 'src/assets/characters/ferret.png'
+            break;
+
         case 1:
             imageSrc = 'src/assets/characters/aunt_ferret.png'
             break;
