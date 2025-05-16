@@ -5,6 +5,7 @@ import { Register } from './pages/register'
 import { Credits } from './pages/credits'
 
 import { Level } from './pages/level'
+import { FinalLevel } from './pages/finalLevel'
 
 export function Router() {
   return (
@@ -18,7 +19,7 @@ export function Router() {
       <Route path="/level3" element={<Level level={3} />} />
       <Route path="/level4" element={<Level level={4} />} />
       <Route path="/level5" element={<Level level={5} />} />
-      <Route path="/level6" element={<Level level={6} />} />
+      <Route path="/level6" element={<FinalLevel />} />
     </Routes>
   )
 }

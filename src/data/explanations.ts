@@ -4,19 +4,6 @@ interface ExplanationsInterface {
 }
 
 export const explanations: ExplanationsInterface[] = [
-    { 
-        category: 2,
-        explanation: "Os animais são uma parte essencial do vocabulário em inglês. Conhecer seus nomes e algumas características básicas ajuda na comunicação diária.\n\n" +
-        "Aqui estão alguns exemplos comuns:\n\n" +
-        "- **Dog** (cachorro) → 'The dog is very friendly.' (O cachorro é muito amigável.)\n" +
-        "- **Cat** (gato) → 'Her cat loves to sleep.' (O gato dela adora dormir.)\n" +
-        "- **Bird** (pássaro) → 'That bird sings beautifully.' (Aquele pássaro canta lindamente.)\n\n" +
-        "Além disso, usamos certos verbos para descrever ações dos animais:\n" +
-        "- **To fly** (voar) → 'Eagles *fly* high in the sky.' (Águias *voam* alto no céu.)\n" +
-        "- **To swim** (nadar) → 'Dolphins *swim* fast.' (Golfinhos *nadam* rápido.)\n" +
-        "- **To run** (correr) → 'Cheetahs *run* very fast.' (Guepardos *correm* muito rápido.)\n\n" +
-        "Aprender sobre os animais e suas ações tornará seu inglês mais natural e divertido!"
-    },
     {
         category: 3,
         explanation: "Saber como pedir comida em inglês é essencial para se comunicar em restaurantes e outros locais de alimentação. Aqui estão algumas frases úteis:\n\n" +

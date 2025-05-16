@@ -13,6 +13,10 @@ import { Router } from "./router";
 
 document.title = "K.O.D | Kingdom of Dialect";
 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+</style>
+
 export function App() {
   return (
     <LevelContextProvider>
