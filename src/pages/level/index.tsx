@@ -59,7 +59,7 @@ export function Level({level} : LevelPropsI) {
                         ) :
                         
                         unlockNext == true ? (
-                            <NavLink to={"/level2"}>Seguir para o próximo nível?</NavLink>
+                            <NavLink to={`/level${level + 1}`}>Seguir para o próximo nível?</NavLink>
                         )
 
                         : <></>
