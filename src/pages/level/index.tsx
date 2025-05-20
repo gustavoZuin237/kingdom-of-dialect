@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 import { Explanation } from '../../components/Explanation'
 import { CharacterImage } from '../../components/CharacterImage'
+import { DialogBox } from '../../components/DialogBox'
 
 interface LevelPropsI {
     level: number
@@ -42,8 +43,14 @@ export function Level({level} : LevelPropsI) {
 
    return (
         <s.PageContainer>
+            <s.CharacterImageContainer>
+                <CharacterImage level={0} />
+            </s.CharacterImageContainer>
+
             <s.ContentContainer>
-                <Explanation level={level} />
+                <DialogBox>
+                    <Explanation level={level} />
+                </DialogBox>
 
                 <s.QuestionContainer>
                     <p>{username}</p>
@@ -67,7 +74,10 @@ export function Level({level} : LevelPropsI) {
                 </s.QuestionContainer>
             </s.ContentContainer>
 
-            <CharacterImage level={level} />
+
+            <s.CharacterImageContainer>
+                <CharacterImage level={level} />
+            </s.CharacterImageContainer>
         </s.PageContainer>
     )
 }
