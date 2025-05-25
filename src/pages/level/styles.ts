@@ -2,18 +2,19 @@ import styled from 'styled-components'
 
 export const PageContainer = styled.div`
     display: flex;
-    justify-content: space-between;
-    padding: 2rem 2rem;
+    justify-content: space-evenly;
+    padding: 2rem;
 `
 
 export const ContentContainer = styled.div`
-    width: 75%;
+    width: 40%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2rem;
-    font-size: 0.85rem;
+
+    margin-left: auto;
+    margin-right: 2rem;
+
+    align-content: flex-end;
+    justify-self: flex-end;
 `
 
 export const CharacterImageContainer = styled.div`

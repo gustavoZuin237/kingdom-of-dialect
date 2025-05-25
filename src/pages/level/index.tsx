@@ -1,16 +1,24 @@
 import * as s from './styles'
 
+import { useState } from 'react'
+
 import { CharacterImage } from '../../components/CharacterImage'
-import { DialogBox } from '../../components/DialogBox'
+import { DialogBox } from '../../components/Dialog/DialogBox'
 
 interface LevelPropsI {
     level: number
 }
 
-export function Level({level} : LevelPropsI) {
+export function Level({ level } : LevelPropsI) {
+    const [showDialogBox, setShowDialogBox] = useState(true)
+
     const username = sessionStorage.getItem("username")
 
-   return (
+    function toggleDialogBox() {
+        setShowDialogBox(!showDialogBox)
+    }
+
+    return (
         <s.PageContainer>
             <s.CharacterImageContainer>
                 <CharacterImage level={0} />
@@ -19,7 +27,13 @@ export function Level({level} : LevelPropsI) {
             <p>{username}</p>
 
             <s.ContentContainer>
-                <DialogBox level={level} />
+                <DialogBox
+                   speaker={"Test speaker"}
+                   text={"Test text"}
+                   onChoice={() => { } }
+                   onNext={toggleDialogBox} 
+                   visible={showDialogBox}                
+                />
             </s.ContentContainer>
 
 
