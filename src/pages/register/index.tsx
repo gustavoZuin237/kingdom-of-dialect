@@ -1,6 +1,8 @@
+import * as s from './styles'
+
 import { useState } from 'react';
 
-import * as s from './styles'
+import { Button } from '../../components/Button';
 
 export function Register() {
     const [userName, setUserName] = useState<string>("");
@@ -15,20 +17,16 @@ export function Register() {
 
     return (
         <s.PageContainer>
-            <s.TitleContainer>
-                <s.Title>Escolha um nome para seu personagem:</s.Title>
-            </s.TitleContainer>
+            <s.Image src='src/assets/logo/logo.png' />
 
             <s.InputContainer>
                 <s.InputLabel>Nome do jogador</s.InputLabel>
-                <s.Input type='text' placeholder='Insira seu nome...' value={userName} onChange={HandleNameChange} />
+                <s.Input type='text' placeholder='Insira seu nome de jogador...' value={userName} onChange={HandleNameChange} />
             </s.InputContainer>
 
-            <s.Button onClick={submitUserRegister} to={"/level1"}>
-                <s.ButtonTitle>
-                    Começar jornada!
-                </s.ButtonTitle>
-            </s.Button>
+            <Button clickFunction={submitUserRegister} link="/level1">
+                NEXT
+            </Button>
         </s.PageContainer>
     )
 }

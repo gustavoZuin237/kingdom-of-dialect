@@ -29,24 +29,6 @@ export const GlobalStyle = createGlobalStyle`
         outline: 0;
     }
 
-    ::-webkit-scrollbar {
-        width: 5px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: transparent;
-        border-radius: 100vw;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: ${(props) => props.theme.purple};
-        border-radius: 100vw;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: ${(props) => props.theme['purple-dark']};
-    }
-
     body, input, button {
         -webkit-font-smoothing: antialiased;
         font-family: 'Handjet', sans-serif;

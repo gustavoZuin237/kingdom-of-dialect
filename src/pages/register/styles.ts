@@ -1,84 +1,60 @@
 import styled from 'styled-components'
 
-import { NavLink } from 'react-router-dom'
-
 export const PageContainer = styled.div`
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 4rem;
+    /* padding: 2rem 2rem; */
+
+    background: url("src/assets/backgrounds/9.creditos_jogo.png") no-repeat center;
+    background-size: cover;
 `
 
-export const TitleContainer = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+export const Image = styled.img`
+    height: 35%;
     margin-bottom: 2rem;
 `
 
-export const Title = styled.h1`
-    font-size: 3.5vw;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.6;
-`
-
 export const InputContainer = styled.div`
-    width: 50%;
+    width: 75%;
+
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-`
-
-export const Input = styled.input`
-    width: 100%;
-    height: 25%;
-    padding: 0.5rem;
-    border: 1px solid;
-    border-radius: 8px;
-
-    &:focus {
-        border: 1px solid;
-    }
-`
-
-export const InputLabel = styled(Title)`
-    font-size: 2vw;
-`
-
-export const ButtonTitle = styled(Title)`
-    font-size: 1.5vw;
-    font-weight: 400;
-`
-
-export const Button = styled(NavLink)`
-    width: 16rem;
-    height: 3rem;
-
-    text-decoration: none;
-    color: black;
-
-    display: flex;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid;
-    border-radius: 6px;
+    gap: 1rem;
+    padding: 1rem 0;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
 
-    transition: 0.2s;
+    border-radius: 12px;
+    color: ${(props) => props.theme['text']};
+    background-color: ${(props) => props.theme['background-light']};
+`
 
-    &:hover {
-        opacity: 0.6;
-        cursor: pointer;
-    }
+export const Input = styled.input`
+    width: 60%;
+    height: 25%;
+    padding: 0.5rem;
 
-    // Correção de bug visual onde a borda desaparece se o elemento estiver em foco
+    color: ${(props) => props.theme['text']};
+    background-color: ${(props) => props.theme['background']};
+
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+
     &:focus {
-        border: 1px solid;
+        border: 1px solid black;
     }
+`
+
+export const InputLabel = styled.h1`
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
 `

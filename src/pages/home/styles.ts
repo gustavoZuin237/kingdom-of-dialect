@@ -3,30 +3,17 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const PageContainer = styled.div`
+    height: 100vh;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     padding: 2rem 4rem;
-`
 
-export const TitleContainer = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 4rem;
-`
-
-export const Title = styled.h1`
-    font-size: 6vw;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.6;
-`
-
-export const Subtitle = styled(Title)`
-    font-size: 2vw;
+    background: url("src/assets/backgrounds/start-screen.png") no-repeat center;
+    background-size: cover;
 `
 
 export const RegisterLink = styled(NavLink)`

@@ -5,12 +5,13 @@ import { ReactNode } from "react"
 interface ButtonPropsI {
     children: ReactNode,
     clickFunction: () => void
+    link?: string
 }
 
-export function Button({ children, clickFunction } : ButtonPropsI) {
+export function Button({ children, clickFunction, link } : ButtonPropsI) {
     return (
-        <button onClick={clickFunction}>
+        <s.ButtonContainer onClick={clickFunction} to={link !== undefined ? link : ""}>
             {children}
-        </button>
+        </s.ButtonContainer>
     )
 }
