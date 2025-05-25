@@ -8,7 +8,6 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "test": "vitest",
-    "test:levelContext": "vitest levelContext",
     "preview": "vite preview"
   },
   "dependencies": {

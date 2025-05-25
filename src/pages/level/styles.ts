@@ -20,7 +20,3 @@ export const CharacterImageContainer = styled.div`
     width: 10%;
     height: 25%;
 `
-
-export const QuestionContainer = styled.div``
-
-export const AnswerContainer = styled.div``

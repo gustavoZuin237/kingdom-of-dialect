@@ -49,7 +49,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body, input, button {
         -webkit-font-smoothing: antialiased;
-        font-family: 'PressStart2P', sans-serif;
+        font-family: 'Handjet', sans-serif;
         font-size: 1rem;
     }
 `

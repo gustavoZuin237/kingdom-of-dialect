@@ -5,8 +5,9 @@ export const DialogBoxContainer = styled.div`
     height: 100%;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
 
     background-color: ${(props) => props.theme['background']};
     border-radius: 8px;
@@ -14,9 +15,10 @@ export const DialogBoxContainer = styled.div`
     padding: 1.5rem;
 
     font-size: 0.8rem;
-
-    &:hover {
-        opacity: 0;
-        transition: 0.5s;
-    }
 `
+
+export const ContentContainer = styled.div``
+
+export const AnswerContainer = styled.div``
+
+export const QuestionContainer = styled.div``
