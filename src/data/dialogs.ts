@@ -341,30 +341,99 @@ export const dialogs : DialogsI[] = [
     dialogLines: [
       {
         id: '1',
-        speaker: `${username}`,
-        text: 'Hey there! Ready to start the game?',
-        choices: [
-          { text: 'Yes!', nextId: '2' },
-          { text: 'Not yet.', nextId: '3' },
-        ],
+        speaker: 'Aunt Ferret',
+        text: 'Agora nós vamos pegar algumas coisas que precisamos no mercado. Preciso de uvas para um suco e leite para fazer um bolo, então vá até ali e peça para o Frog Jr. Ele vai te vender o que precisa se disser para ele que você procura milk and grapes. Milk é leite, grapes são uvas, então o que você deve pedir?',
+        nextId: '2',
       },
       {
         id: '2',
-        speaker: 'Character A',
-        text: 'Awesome! Let’s get going then.',
-        nextId: '4',
+        speaker: `${username}`,
+        text: 'Milk and grapes, leite e uvas',
+        nextId: '3',
       },
       {
         id: '3',
-        speaker: 'Character A',
-        text: 'Alright, take your time.',
+        speaker: 'Aunt Ferret',
+        text: 'Muito bem, acertou. Não esqueça de pedir por favor dizendo "please"',
         nextId: '4',
       },
       {
         id: '4',
-        speaker: 'Player',
-        text: 'Let’s do this!',
-        nextId: undefined, // End of dialog
+        speaker: 'Frog Jr',
+        text: 'Welcome to the market! What do you need, friend?',
+        nextId: '5',
+      },
+      {
+        id: '5',
+        speaker: `${username}`,
+        text: 'Hello, I need milk and grapes, please.',
+        nextId: '6'
+      },
+      {
+        id: '6',
+        speaker: 'Frog Jr',
+        text: 'Coming right up!',
+        nextId: '7',
+      },
+      {
+        id: '7',
+        speaker: 'Aunt Ferret',
+        text: `Hi Frog Jr, this is ${username}, they don't understand everything in English yet, just Portuguese, so be patient.`,
+        nextId: '8',
+      },
+      {
+        id: '8',
+        speaker: 'Frog Jr',
+        text: "Oh I see... Well, I don't understand Portugue so I guess we both need to be patient haha.",
+        nextId: '9',
+      },
+      {
+        id: '9',
+        speaker: 'Aunt Ferret',
+        text: '“Ele também não te entende, é uma pena. Mas agradeça ele pela compra, diga obrigado pelo que você comprou, começando com ”Thanks for...',
+        choices: [
+          { text: 'Thanks for the grapes and milk, Frog Jr', nextId: '11' },
+          { text: 'Thanks for the Frog Jr, grapes', nextId: '12' },
+        ],
+      },
+      {
+        id: '11',
+        speaker: 'Aunt Ferret',
+        text: 'Bom trabalho, acertou!',
+        nextId: '13',
+      },
+      {
+        id: '12',
+        speaker: 'Aunt Ferret',
+        text: `Parece que você se confundiu ${username} haha! Você agradeceu as uvas pelo Frog Jr, invés de agradecer o Frog Jr pelas uvas`,
+        nextId: '13',
+      },
+      {
+        id: '13',
+        speaker: 'Aunt Ferret',
+        text: 'Agora diga tchau ao Frog Jr antes de irmos',
+        choices: [
+          { text: 'Goodbye Frog Jr', nextId: '14' },
+          { text: 'Welcome Frog Jr', nextId: '15' },
+        ],
+      },
+      {
+        id: '14',
+        speaker: 'Aunt Ferret',
+        text: `Isso ${username}, acertou. Agora pegue as sacolas e vamos para casa`,
+        nextId: '16',
+      },
+      {
+        id: '15',
+        speaker: 'Aunt Ferret',
+        text: `Ops, você disse bem-vindo para ele invés de se despedir.`,
+        nextId: '16',
+      },
+      {
+        id: '16',
+        speaker: 'Aunt Ferret',
+        text: `Goodbye Frog Jr, say hello to your dad for me.`,
+        nextId: undefined,
       },
     ]
   },
