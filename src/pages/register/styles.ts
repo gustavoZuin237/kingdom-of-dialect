@@ -6,9 +6,8 @@ export const PageContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding: 2rem 2rem; */
 
-    background: url("src/assets/backgrounds/9.creditos_jogo.png") no-repeat center;
+    background: url("src/assets/backgrounds/1.casa_start.png") no-repeat center;
     background-size: cover;
 `
 

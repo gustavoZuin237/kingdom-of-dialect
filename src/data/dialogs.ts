@@ -13,13 +13,15 @@ export type DialogLine = {
 
 export type Dialog = DialogLine[];
 
+const username = sessionStorage.getItem("username")
+
 export const dialogs = [
   {
     level: 1,
     dialogLines: [
       {
         id: '1',
-        speaker: 'Character A',
+        speaker: `${username}`,
         text: 'Hey there! Ready to start the game?',
         choices: [
           { text: 'Yes!', nextId: '2' },

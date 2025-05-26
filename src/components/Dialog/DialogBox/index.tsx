@@ -29,6 +29,7 @@ export function DialogBox({ speaker, text, choices, onNext, onChoice, visible } 
                             choices.map((choice) => (
                                 <Button
                                     key={choice.nextId}
+                                    variant='black-outline'
                                     clickFunction={() => onChoice(choice.nextId)}
                                 >
                                     {choice.text}
@@ -37,7 +38,7 @@ export function DialogBox({ speaker, text, choices, onNext, onChoice, visible } 
                         ) 
                         : 
                         (
-                            <Button clickFunction={onNext}>Next</Button>
+                            <Button variant='black-outline' clickFunction={onNext}>Next</Button>
                         )
                     }
                 </s.ButtonContainer>

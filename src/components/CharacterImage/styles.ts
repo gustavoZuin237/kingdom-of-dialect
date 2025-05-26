@@ -2,17 +2,12 @@ import styled from "styled-components";
 
 export const CharacterContainer = styled.div`
     width: 100%;
-    height: 100%;
-
-    min-width: 5rem;
-    min-height: 2rem;
-
-    background-color: ${(props) => props.theme['background-dark']};
-
-    border: 1px solid;
-    border-radius: 100%;
-
+    height: auto;
+    min-width: 100px;
     padding: 1rem;
+
+    background-color: ${(props) => props.theme['background']};
+    border-radius: 100%;
 
     display: flex;
     align-items: center;

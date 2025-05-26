@@ -6,11 +6,12 @@ interface ButtonPropsI {
     children: ReactNode,
     clickFunction: () => void
     link?: string
+    variant: 'white' | 'black' | 'white-outline' | 'black-outline'
 }
 
-export function Button({ children, clickFunction, link } : ButtonPropsI) {
+export function Button({ children, clickFunction, link, variant } : ButtonPropsI) {
     return (
-        <s.ButtonContainer onClick={clickFunction} to={link !== undefined ? link : ""}>
+        <s.ButtonContainer variant={variant} onClick={clickFunction} to={link !== undefined ? link : ""}>
             {children}
         </s.ButtonContainer>
     )

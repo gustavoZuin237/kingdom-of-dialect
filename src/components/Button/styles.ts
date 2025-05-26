@@ -2,25 +2,64 @@ import styled from "styled-components";
 
 import { NavLink } from "react-router-dom";
 
-export const ButtonContainer = styled(NavLink)`
-    width: 10rem;
+type ButtonProps = {
+  variant: 'white' | 'black' | 'white-outline' | 'black-outline';
+};
+
+export const ButtonContainer = styled(NavLink)<ButtonProps>`
+    ${({ variant, theme }) => {
+        switch (variant) {
+            case 'white':
+                return `
+                    color: ${theme.text};
+                `;
+
+            case 'black':
+                return `
+                    color: ${theme.black};
+                `;
+
+            case 'white-outline':
+                return `
+                    color: ${theme.text};
+                    border: 1px solid ${theme.black};
+
+                    &:focus {
+                        border: 1px solid ${theme.black};
+                    }
+                `;
+
+            case 'black-outline':
+                return `
+                    color: ${theme.black};
+                    border: 1px solid ${theme.black};
+
+                    &:focus {
+                        border: 1px solid ${theme.black};
+                    }
+                `;
+        
+            default:
+                break;
+        }
+    }}
+
+    width: auto;
+    min-width: 8rem;
     height: 4rem;
     padding: 1rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border: 0;
     border-radius: 12px;
 
-    color: ${(props) => props.theme['text']};
     font-size: 1.5rem;
-    font-family: "PressStart2P", sans-serif;
+    font-family: "PixelifySans", sans-serif;
     text-decoration: none;
-
-    background-color: ${(props) => props.theme['background-light']};
-
+    text-align: center;
+    background-color:  ${(props) => props.theme['background-light']};
+    
     &:hover {
         cursor: pointer;
         opacity: 0.75;

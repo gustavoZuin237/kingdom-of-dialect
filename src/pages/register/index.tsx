@@ -24,7 +24,7 @@ export function Register() {
                 <s.Input type='text' placeholder='Insira seu nome de jogador...' value={userName} onChange={HandleNameChange} />
             </s.InputContainer>
 
-            <Button clickFunction={submitUserRegister} link="/level1">
+            <Button variant='white' clickFunction={submitUserRegister} link="/level1">
                 NEXT
             </Button>
         </s.PageContainer>
