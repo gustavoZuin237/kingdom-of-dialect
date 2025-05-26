@@ -37,7 +37,7 @@ export function Level({ level } : LevelPropsI) {
     };
 
     return (
-        <s.PageContainer>
+        <s.PageContainer level={level}>
             <s.CharacterImageContainer>
                 <CharacterImage level={0} />
             </s.CharacterImageContainer>

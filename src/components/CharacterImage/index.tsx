@@ -21,11 +21,11 @@ export function CharacterImage({level} : CharacterImagePropsI) {
             break;
 
         case 3:
-            imageSrc = 'src/assets/characters/duck.png'
+            imageSrc = 'src/assets/characters/frog.png'
             break;
 
         case 4:
-            imageSrc = 'src/assets/characters/frog.png'
+            imageSrc = 'src/assets/characters/duck.png'
             break;
 
         case 5:

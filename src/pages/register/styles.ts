@@ -39,12 +39,16 @@ export const Input = styled.input`
     height: 25%;
     padding: 0.5rem;
 
-    color: ${(props) => props.theme['text']};
+    color: ${(props) => props.theme['black']};
     background-color: ${(props) => props.theme['background']};
 
     border: 0;
     outline: 0;
     border-radius: 8px;
+
+    &::placeholder {
+        color: ${(props) => props.theme['black']};
+    }
 
     &:focus {
         border: 1px solid black;

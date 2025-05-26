@@ -1,13 +1,66 @@
 import styled from 'styled-components'
 
-export const PageContainer = styled.div`
+type LevelProps = {
+  level: number;
+};
+
+export const PageContainer = styled.div<LevelProps>`
     display: flex;
     justify-content: space-between;
     padding: 2rem 4rem 0 2rem;
 
     height: 100vh;
-    background: url("src/assets/backgrounds/1.casa_start.png") no-repeat center;
     background-size: cover;
+    background: no-repeat center;
+
+    ${({ level }) => {
+        switch (level) {
+            case 0:
+                return `
+                    background: url("src/assets/backgrounds/2.portal.png") no-repeat center;
+                    background-size: cover;
+                `;
+
+            case 1:
+                return `
+                    background: url("src/assets/backgrounds/3.casa_tia.png") no-repeat center;
+                    background-size: cover;
+                `;
+
+            case 2:
+                return `
+                    background: url("src/assets/backgrounds/4.fazenda.png") no-repeat center;
+                    background-size: cover;
+                `;
+
+            case 3:
+                return `
+                    background: url("src/assets/backgrounds/5.mercado.png") no-repeat center;
+                    background-size: cover;
+                `;
+
+            case 4:
+                return `
+                    background: url("src/assets/backgrounds/6.loja_roupa.png") no-repeat center;
+                    background-size: cover;
+                `;
+
+            case 5:
+                return `
+                    background: url("src/assets/backgrounds/7.computador.png") no-repeat center;
+                    background-size: cover;
+                `;
+
+            case 6:
+                return `
+                    background: url("src/assets/backgrounds/8.final_portal.png") no-repeat center;
+                    background-size: cover;
+                `;
+        
+            default:
+                break;
+        }
+    }}
 `
 
 export const ContentContainer = styled.div`
