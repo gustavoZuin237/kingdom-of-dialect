@@ -58,7 +58,7 @@ export const ButtonContainer = styled(NavLink)<ButtonProps>`
     font-family: "PixelifySans", sans-serif;
     text-decoration: none;
     text-align: center;
-    background-color:  ${(props) => props.theme['background-light']};
+    background-color: ${(props) => props.theme['background-light']};
     
     &:hover {
         cursor: pointer;

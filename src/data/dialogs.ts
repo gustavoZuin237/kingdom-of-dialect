@@ -77,7 +77,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '5',
         speaker: 'Aunt Ferret',
-        text: 'Aqui as coisas são diferentes de lá de casa, aqui as pessoas falam de forma diferente. O único jeito de você ir pra casa é pedindo ao Dr Bones e ele não entende tudo que falamos',
+        text: 'Aqui as coisas são diferentes de lá de casa, aqui as pessoas falam de forma diferente. O único jeito de você ir pra casa é pedindo ao Dr. Bones e ele não entende tudo que falamos',
         nextId: '6',
       },
       {
@@ -107,7 +107,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '10',
         speaker: 'Aunt Ferret',
-        text: 'Mother é mãe, sabia que em muitas linguas mãe começa com M? em inglês falamos mother para mãe e mom que seria mãe de um jeito mais próximo e intimo quando estamos falando com ela ou alguém que conhecemos e falando dela. Como você deve se referir a sua mãe quando conversar com o Dr Bones?',
+        text: 'Mother é mãe, sabia que em muitas linguas mãe começa com M? em inglês falamos mother para mãe e mom que seria mãe de um jeito mais próximo e intimo quando estamos falando com ela ou alguém que conhecemos e falando dela. Como você deve se referir a sua mãe quando conversar com o Dr. Bones?',
         nextId: '11',
       },
       {
@@ -216,30 +216,123 @@ export const dialogs : DialogsI[] = [
     dialogLines: [
       {
         id: '1',
-        speaker: `${username}`,
-        text: 'Hey there! Ready to start the game?',
-        choices: [
-          { text: 'Yes!', nextId: '2' },
-          { text: 'Not yet.', nextId: '3' },
-        ],
+        speaker: 'Aunt Ferret',
+        text: 'Bem-vindo(a) a fazenda do Sr. Fox, em inglês chamamos fazenda de farm',
+        nextId: '2',
       },
       {
         id: '2',
-        speaker: 'Character A',
-        text: 'Awesome! Let’s get going then.',
-        nextId: '4',
+        speaker: 'Sr. Fox',
+        text: 'Welcome Aunt Ferret, how are you doing?',
+        nextId: '3',
       },
       {
         id: '3',
-        speaker: 'Character A',
-        text: 'Alright, take your time.',
+        speaker: 'Aunt Ferret',
+        text: `Hello Mr. Fox! I'm doing great, thank you for asking. This is ${username}, they came to see me. They don’t speak English, can you help them?`,
         nextId: '4',
       },
       {
         id: '4',
-        speaker: 'Player',
-        text: 'Let’s do this!',
-        nextId: undefined, // End of dialog
+        speaker: 'Sr. Fox',
+        text: 'Olá, eu sou o senhor Fox, dono desta linda fazenda.',
+        nextId: '5',
+      },
+      {
+        id: '5',
+        speaker: `${username}`,
+        text: 'Minha tia disse que aqui é uma fazenda, que se chama farm em inglês.',
+        nextId: '6',
+      },
+      {
+        id: '6',
+        speaker: 'Sr. Fox',
+        text: 'Isso mesmo! E aqui nessa farm vendemos todo tipo de produto animal. O que vai querer hoje Aunt Ferret?',
+        nextId: '7',
+      },
+      {
+        id: '7',
+        speaker: 'Aunt Ferret',
+        text: `Ovos e frango. Vamos lá ${username}, diga a ele que precisamos de eggs and chicken`,
+        nextId: '8',
+      },
+      {
+        id: '8',
+        speaker: `${username}`,
+        text: 'Precisamos de eggs and chicken Sr. Fox, vamos fazer um jantar',
+        nextId: '9',
+      },
+      {
+        id: '9',
+        speaker: 'Sr. Fox',
+        text: `Que legal ${username}, então vocês querem ovos e frango para jantar. Vou separar os produtos para vocês agora mesmo!`,
+        nextId: '10',
+      },
+      {
+        id: '11',
+        speaker: 'Aunt Ferret',
+        text: `Vamos testar seu conhecimento ${username}. Com o que fazemos uma omelete ou uma gemada?`,
+        choices: [
+          { text: 'Eggs', nextId: '12' },
+          { text: 'Chicken', nextId: '13' },
+        ],
+      },
+      {
+        id: '12',
+        speaker: 'Aunt Ferret',
+        text: 'Sim, ovos servem para várias otimas receitas, doce e salgadas',
+        nextId: '14',
+      },
+      {
+        id: '13',
+        speaker: 'Sr. Fox',
+        text: 'Ops, acho que trocamos de ideias aqui. Chicken significa frango e com frango conseguimos fazer várias receitas, mas omelete não é uma delas...',
+        nextId: '14',
+      },
+      {
+        id: '14',
+        speaker: 'Aunt Ferret',
+        text: 'Onde encontramos os melhores produtos animais? Use essa frase para te ajudar, só precisa completar com a última palavra: "On the ____"',
+        choices: [
+          { text: 'On the farm', nextId: '15' },
+          { text: 'On the far', nextId: '16' },
+        ],
+      },
+      {
+        id: '15',
+        speaker: 'Aunt Ferret',
+        text: 'Isso, agora você já sabe para onde vir quando quiser o alimento com a melhor qualidade',
+        nextId: '17',
+      },
+      {
+        id: '16',
+        speaker: 'Aunt Ferret',
+        text: 'Far tem outro significado em inglês, mesmo que seja uma palavra bem parecida. Precisamos analisar os pequenos detalhes para não cometermos erros nos dialogos',
+        nextId: '17',
+      },
+      {
+        id: '17',
+        speaker: 'Sr. Fox',
+        text: 'Aqui estão os ovos e frango, Aunt Ferret. Bye bye!',
+        nextId: '18',
+      },
+      {
+        id: '18',
+        speaker: 'Aunt Ferret',
+        text: `Muito obrigada Sr. Fox, take care. Diga "bye" para o Sr. Fox ${username}, isso significa "tchau"`,
+        nextId: '19',
+      },
+      {
+        id: '19',
+        speaker: `${username}`,
+        text: 'Bye bye Sr. Fox!',
+        nextId: '20',
+      },
+      {
+        id: '20',
+        speaker: 'Aunt Ferret',
+        text: `Muito bem ${username}!`,
+        nextId: undefined,
       },
     ]
   },
