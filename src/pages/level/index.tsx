@@ -42,6 +42,14 @@ export function Level({ level } : LevelPropsI) {
         <s.PageContainer level={level}>
             <s.CharacterImageContainer>
                 <CharacterImage level={0} />
+
+                {
+                    level >= 2 ? (
+                        <CharacterImage level={1} />
+                    )
+                    :
+                    <></>
+                }
             </s.CharacterImageContainer>
 
             <s.ContentContainer>

@@ -83,4 +83,8 @@ export const ContentContainer = styled.div`
 export const CharacterImageContainer = styled.div`
     width: 10%;
     height: 25%;
+    gap: 1rem;
+
+    display: flex;
+    flex-direction: column;
 `
