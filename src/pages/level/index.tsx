@@ -57,10 +57,15 @@ export function Level({ level } : LevelPropsI) {
                 }
             </s.ContentContainer>
 
-
-            <s.CharacterImageContainer>
-                <CharacterImage level={level} />
-            </s.CharacterImageContainer>
+            {
+                level !== 0 ? (
+                    <s.CharacterImageContainer>
+                        <CharacterImage level={level} />
+                    </s.CharacterImageContainer>
+                )
+                :
+                <></>
+            }
         </s.PageContainer>
     )
 }
