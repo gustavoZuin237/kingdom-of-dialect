@@ -5,13 +5,10 @@ type LevelProps = {
 };
 
 export const PageContainer = styled.div<LevelProps>`
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem 4rem 0 2rem;
-
     height: 100vh;
-    background-size: cover;
-    background: no-repeat center;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 4rem 0 2rem;
 
     ${({ level }) => {
         switch (level) {
@@ -73,9 +70,8 @@ export const ContentContainer = styled.div`
     max-height: 50%;
 
     display: flex;
-    align-content: flex-end;
-    justify-self: flex-end;
-    margin: 0 2rem 0 auto;
+    justify-content: center;
+    margin-inline: auto;
 
     @media (max-width: 600px) {
         max-width: 100%;

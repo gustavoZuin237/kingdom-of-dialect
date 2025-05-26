@@ -28,7 +28,7 @@ export function DialogBox({ speaker, text, choices, onNext, onChoice, visible } 
                         choices && choices.length > 0 ? (
                             choices.map((choice) => (
                                 <Button
-                                    key={choice.nextId}
+                                    key={choice.text}
                                     variant='black-outline'
                                     clickFunction={() => onChoice(choice.nextId)}
                                 >

@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 import { CharacterImage } from '../../components/CharacterImage'
 import { DialogBox } from '../../components/Dialog/DialogBox'
+import { Button } from '../../components/Button'
 
 import { dialogs } from '../../data/dialogs'
 
@@ -17,10 +18,6 @@ export function Level({ level } : LevelPropsI) {
 
     const levelDialog = dialogs.find((d) => d.level === level)?.dialogLines;
     const currentLine = levelDialog?.find((line) => line.id === currentDialogId);
-
-    function toggleDialogBox() {
-        setIsDialogOpen(!isDialogOpen)
-    }
 
     function handleNext() {
         if (currentLine?.nextId) {
@@ -36,6 +33,11 @@ export function Level({ level } : LevelPropsI) {
         setCurrentDialogId(nextId);
     };
 
+    function handleLevelEnd() {
+        setCurrentDialogId('1')
+        setIsDialogOpen(true)
+    }
+
     return (
         <s.PageContainer level={level}>
             <s.CharacterImageContainer>
@@ -44,7 +46,7 @@ export function Level({ level } : LevelPropsI) {
 
             <s.ContentContainer>
                 {
-                    isDialogOpen && currentLine && (
+                    isDialogOpen && currentLine ? (
                         <DialogBox
                             speaker={currentLine.speaker}
                             text={currentLine.text}
@@ -53,6 +55,20 @@ export function Level({ level } : LevelPropsI) {
                             onNext={handleNext} 
                             visible={isDialogOpen}                
                         />
+                    )
+                    :
+                    (
+                        <Button variant='black-outline' link={`${level < 6 ? `/level${level + 1}` : '/credits'}`} clickFunction={handleLevelEnd}>
+                            {
+                                level < 6 ? (
+                                    <>Próxima fase</>
+                                )
+                                :
+                                (
+                                   <>Créditos</> 
+                                ) 
+                            }
+                        </Button>
                     )
                 }
             </s.ContentContainer>
