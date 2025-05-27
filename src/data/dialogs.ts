@@ -442,30 +442,132 @@ export const dialogs : DialogsI[] = [
     dialogLines: [
       {
         id: '1',
-        speaker: `${username}`,
-        text: 'Hey there! Ready to start the game?',
-        choices: [
-          { text: 'Yes!', nextId: '2' },
-          { text: 'Not yet.', nextId: '3' },
-        ],
+        speaker: 'Aunt Ferret',
+        text: `Sabe ${username}, pensei em ir direto para casa mas olha que lindos vestidos a loja da Miss Duck tem! Vamos entrar e ver um pouco mais.`,
+        nextId: '2'
       },
       {
         id: '2',
-        speaker: 'Character A',
-        text: 'Awesome! Let’s get going then.',
-        nextId: '4',
+        speaker: `${username}`,
+        text: 'Ok, como se chama essa loja?',
+        nextId: '3',
       },
       {
         id: '3',
-        speaker: 'Character A',
-        text: 'Alright, take your time.',
+        speaker: 'Aunt Ferret',
+        text: 'Clothing store, ou loja de roupas. Miss Duck vende roupas lindas... Mas ela vai falar em inglês, então quando entrar diga a Miss Duck ”I don’t understand English”, que significa "Eu não entendo inglês"',
         nextId: '4',
       },
       {
-        id: '4',
-        speaker: 'Player',
-        text: 'Let’s do this!',
-        nextId: undefined, // End of dialog
+        id: '5',
+        speaker: 'Ms. Duck',
+        text: 'Welcome to my clothing store!',
+        nextId: '6',
+      },
+      {
+        id: '6',
+        speaker: `${username}`,
+        text: 'Hello! I don’t understand English',
+        nextId: '7',
+      },
+      {
+        id: '7',
+        speaker: 'Ms. Duck',
+        text: 'Ah sim, entendi! O que você gostaria de vestir hoje?',
+        nextId: '8',
+      },
+      {
+        id: '8',
+        speaker: `${username}`,
+        text: 'Minha tia gostou de um vestido, eu gostei desta bermuda, como posso pedir essas peças em inglês?',
+        nextId: '9',
+      },
+      {
+        id: '9',
+        speaker: 'Ms. Duck',
+        text: 'Bom, vestido se diz "dress" em inglês, e bermudas são chamadas "shorts"',
+        nextId: '10',
+      },
+      {
+        id: '10',
+        speaker: `${username}`,
+        text: 'Dress and shorts, vestido e bermuda. Entendi!',
+        nextId: '11',
+      },
+      {
+        id: '11',
+        speaker: 'Ms. Duck',
+        text: 'Isso! Agora me diga o que você vai querer levar, antes do nome da peça diga "I’ll take the...":',
+        choices: [
+          { text: 'I’ll take the shorts', nextId: '12' },
+          { text: 'I’ll take the dress', nextId: '13' },
+        ],
+      },
+      {
+        id: '12',
+        speaker: 'Ms. Duck',
+        text: 'Ótimo! Vamos pegar um “shorts” para você',
+        nextId: '14',
+      },
+      {
+        id: '13',
+        speaker: 'Ms. Duck',
+        text: 'Vai ter que brigar com sua tia pelo vestido hahaha!',
+        nextId: '14',
+      },
+      {
+        id: '14',
+        speaker: 'Ms. Duck',
+        text: 'E agora, o que sua tia irá levar? Diga "she chose the..." antes do nome da roupa',
+        choices: [
+          { text: 'She chose the dress', nextId: '15' },
+          { text: 'She chose the shorts', nextId: '16' },
+        ],
+      },
+      {
+        id: '15',
+        speaker: 'Ms. Duck',
+        text: 'Ótimo! Vamos pegar o "dress" para ela',
+        nextId: '17',
+      },
+      {
+        id: '16',
+        speaker: 'Ms. Duck',
+        text: 'Ops, acho que você quis dizer que ela gostou mais do vestido. Vestido em inglês é "dress"',
+        nextId: '17',
+      },
+      {
+        id: '17',
+        speaker: 'Aunt Ferret',
+        text: 'Bom trabalho, agora agradeça e diga adeus a Miss Duck',
+        choices: [
+          { text: 'Goodbye Ms. Duck!', nextId: '18' },
+          { text: 'Goodbye Sr. Duck', nextId: '19' },
+        ],
+      },
+      {
+        id: '18',
+        speaker: 'Aunt Ferret',
+        text: 'Ela adorou você! Agora vamos para casa comer',
+        nextId: '20',
+      },
+      {
+        id: '19',
+        speaker: 'Aunt Ferret',
+        text: 'Ms. é uma referência a damas como a Ms. Duck, Sr. é uma referência a senhores, então podemos usar com o Sr. Fox ou até com Frog Jr, por exemplo, mas não com a Ms. Duck.',
+        nextId: '20',
+      },
+      {
+        id: '20',
+        speaker: 'Aunt Ferret',
+        text: 'Well, bye bye Ms. Duck. Thank you for the clothes',
+        nextId: '21',
+      },
+      {
+        id: '21',
+        speaker: 'Ms. Duck',
+        text: 'Bye ferrets!',
+        nextId: undefined,
       },
     ]
   },
