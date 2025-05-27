@@ -7,11 +7,12 @@ interface ButtonPropsI {
     clickFunction: () => void
     link?: string
     variant: 'white' | 'black' | 'white-outline' | 'black-outline'
+    disabled?: boolean
 }
 
-export function Button({ children, clickFunction, link, variant } : ButtonPropsI) {
+export function Button({ children, clickFunction, link, variant, disabled } : ButtonPropsI) {
     return (
-        <s.ButtonContainer variant={variant} onClick={clickFunction} to={link !== undefined ? link : ""}>
+        <s.ButtonContainer disabled={disabled} variant={variant} onClick={clickFunction} to={link !== undefined ? link : ""}>
             {children}
         </s.ButtonContainer>
     )

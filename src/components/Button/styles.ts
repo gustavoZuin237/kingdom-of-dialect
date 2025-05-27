@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 type ButtonProps = {
   variant: 'white' | 'black' | 'white-outline' | 'black-outline';
+  disabled?: boolean
 };
 
 export const ButtonContainer = styled(NavLink)<ButtonProps>`
@@ -61,7 +62,19 @@ export const ButtonContainer = styled(NavLink)<ButtonProps>`
     background-color: ${(props) => props.theme['background-light']};
     
     &:hover {
-        cursor: pointer;
         opacity: 0.75;
+
+        ${({ disabled }) => {
+            if (disabled) {
+                return `
+                    cursor: not-allowed;
+                `
+            }
+            else {
+                return `
+                    cursor: pointer;
+                `
+            }
+        }}
     }
 `

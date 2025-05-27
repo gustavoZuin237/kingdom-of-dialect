@@ -8,11 +8,13 @@ export function Register() {
     const [userName, setUserName] = useState<string>("");
 
     function HandleNameChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setUserName(event.target.value)
+        setUserName(event.target.value) 
     }
 
     function submitUserRegister() {
-        sessionStorage.setItem("username", userName)
+        if (userName !== '') {
+            sessionStorage.setItem("username", userName)
+        }
     }
 
     return (
@@ -24,9 +26,16 @@ export function Register() {
                 <s.Input type='text' placeholder='Insira seu nome de jogador...' value={userName} onChange={HandleNameChange} />
             </s.InputContainer>
 
-            <Button variant='white' clickFunction={submitUserRegister} link="/level0">
-                NEXT
-            </Button>
+            {
+                userName !== '' ? 
+                <Button variant='white' clickFunction={submitUserRegister} link="/level0">
+                    NEXT
+                </Button>
+                :
+                <Button disabled variant='white' clickFunction={submitUserRegister} link="">
+                    NEXT
+                </Button>
+            }
         </s.PageContainer>
     )
 }
