@@ -30,16 +30,39 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html, body, #root {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-  }
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: #888;
+    }
 
     body, input, button {
         -webkit-font-smoothing: antialiased;
         font-family: 'PixelifySans', sans-serif;
         font-size: 1rem;
+    }
+
+    /* Width */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Track (background) */
+    ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 12px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 12px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
     }
 `
