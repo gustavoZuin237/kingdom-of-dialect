@@ -577,29 +577,59 @@ export const dialogs : DialogsI[] = [
       {
         id: '1',
         speaker: `${username}`,
-        text: 'Hey there! Ready to start the game?',
-        choices: [
-          { text: 'Yes!', nextId: '2' },
-          { text: 'Not yet.', nextId: '3' },
-        ],
+        text: 'Aunt, agora que já preparamos o jantar, podemos mandar uma mesagem para Father Ferret e Mother Ferret? Eles devem estar preocupados.',
+        nextId: '2',
       },
       {
         id: '2',
-        speaker: 'Character A',
-        text: 'Awesome! Let’s get going then.',
-        nextId: '4',
+        speaker: 'Aunt Ferret',
+        text: 'Vamos ver se você prestou atenção nas nossas conversas de hoje. Você vai escrever uma mensagem dizendo aos seus pais que sente muita saudade deles, conte também que fomos visitar a vila, compramos roupas e conhecemos pessoas legais',
+        nextId: '3',
       },
       {
         id: '3',
-        speaker: 'Character A',
-        text: 'Alright, take your time.',
+        speaker: 'Aunt Ferret',
+        text: 'É só ligar o computador e clicar em Message. Isso irá mostrar onde enviar uma mensagem para seus pais',
         nextId: '4',
       },
       {
         id: '4',
-        speaker: 'Player',
-        text: 'Let’s do this!',
-        nextId: undefined, // End of dialog
+        speaker: `${username}`,
+        text: 'Queridos Father and Mother, hoje vim visitar Aunt Ferret sem querer, porque cai em um buraco estranho e acabei em um lugar em que falam outra lingua. Aprendi muitas coisas, por exemplo posso chamar a mamãe de mom ou mother, o papai de dad ou father. Estou com muita saudade e mal posso esperar para voltar para casa!',
+        nextId: '5'
+      },
+      {
+        id: '5',
+        speaker: 'Aunt Ferret',
+        text: 'Muito bem, mensagem enviada. Seus pais não vão se preocupar sabendo que você está bem.',
+        nextId: '6'
+      },
+      {
+        id: '6',
+        speaker: 'Aunt Ferret',
+        text: `Se sente pronto(a) para encontrar o Dr. Bones e ir para casa ${username}?`,
+        choices: [
+          { text: 'Não, estou com medo...', nextId: '7' },
+          { text: 'Sim! Mal posso esperar, vou arrebentar.', nextId: '8' },
+        ],
+      },
+      {
+        id: '7',
+        speaker: 'Aunt Ferret',
+        text: 'As vezes precisamos fazer coisas que dão medo, mesmo se parecem difíceis. Eu confio em você, sei que vai conseguir.',
+        nextId: '9',
+      },
+      {
+        id: '8',
+        speaker: 'Aunt Ferret',
+        text: 'Esse é o espírito! Tenho certeza que você vai conseguir',
+        nextId: '9',
+      },
+      {
+        id: '9',
+        speaker: 'Aunt Ferret',
+        text: 'Mas antes de ir, é melhor descansar e comer. Vai precisar se concentrar para conversar com o Dr. Bones.',
+        nextId: undefined,
       },
     ]
   },
@@ -608,30 +638,114 @@ export const dialogs : DialogsI[] = [
     dialogLines: [
       {
         id: '1',
-        speaker: `${username}`,
-        text: 'Hey there! Ready to start the game?',
-        choices: [
-          { text: 'Yes!', nextId: '2' },
-          { text: 'Not yet.', nextId: '3' },
-        ],
+        speaker: 'Aunt Ferret',
+        text: `Aqui estamos ${username}, o Dr. Bones está te esperando logo a frente, mas você vai precisar conversar com ele sem ajuda. Seja educado e faça seu melhor para entendê-lo.`,
+        nextId: '2',
       },
       {
         id: '2',
-        speaker: 'Character A',
-        text: 'Awesome! Let’s get going then.',
-        nextId: '4',
+        speaker: 'Aunt Ferret',
+        text: `Ele só fala inglês, mas talvez tente falar um pouco de Português para que você entenda melhor. Eu acredito em você ${username}, vai lá!`,
+        nextId: '3',
       },
       {
         id: '3',
-        speaker: 'Character A',
-        text: 'Alright, take your time.',
+        speaker: `${username}`,
+        text: 'Obrigado por tudo Aunt Ferret, não teria conseguido sem você! Eu vou para casa e vou contar tudo que fizessemos para os meus pais!',
         nextId: '4',
       },
       {
         id: '4',
-        speaker: 'Player',
-        text: 'Let’s do this!',
-        nextId: undefined, // End of dialog
+        speaker: 'Aunt Ferret',
+        text: 'Isso mesmo, vá para casa e conte tudo aos seus pais, tenho certeza que vão adorar ouvir suas histórias. Agora é hora de ir, vá lá e converse com o Dr. Bones.',
+        nextId: '5',
+      },
+      {
+        id: '5',
+        speaker: 'Dr. Bones',
+        text: 'Hello? É você Aunt Ferret?',
+        nextId: '6',
+      },
+      {
+        id: '6',
+        speaker: `${username}`,
+        text: `No, I'm ${username}.`,
+        nextId: '7',
+      },
+      {
+        id: '7',
+        speaker: 'Dr. Bones',
+        text: 'I see... How can I ajudar você?',
+        choices: [
+          { text: 'I want to go home. I miss my father and mother', nextId: '9' },
+          { text: 'I want to go home. I miss my ferret', nextId: '10' },
+        ],
+      },
+      {
+        id: '8',
+        speaker: 'Dr. Bones',
+        text: 'How can I ajudar você?',
+        choices: [
+          { text: 'I want to go home. I miss my father and mother', nextId: '9' },
+          { text: 'I want to go home. I miss my ferret', nextId: '10' },
+        ],
+      },
+      {
+        id: '9',
+        speaker: 'Dr. Bones',
+        text: `Ok ${username}, you want to go home. But antes, let's talk about seu dia no kingdom.`,
+        nextId: '11',
+      },
+      {
+        id: '10',
+        speaker: 'Dr. Bones',
+        text: `Your ferret? But você é um ferret. Let's go back to the começo, pay attention to my perguntas!`,
+        nextId: '8',
+      },
+      {
+        id: '11',
+        speaker: 'Dr. Bones',
+        text: `Did you visit the farm today?`,
+        choices: [
+          { text: 'Yes, I visited the farm and met Mr. Fox', nextId: '12' },
+          { text: 'Yes, we got a dress and shorts!', nextId: '13' },
+        ],
+      },
+      {
+        id: '12',
+        speaker: 'Dr. Bones',
+        text: `Great! Mr. Fox is very nice and the farm is beautiful.`,
+        nextId: '14',
+      },
+      {
+        id: '13',
+        speaker: 'Dr. Bones',
+        text: `I think you are thinking of the clothing store, or loja de roupas. Let me ask de novo.`,
+        nextId: '11',
+      },
+      {
+        id: '14',
+        speaker: 'Dr. Bones',
+        text: `I'm happy to know you had fun and gostou do kingdom. Ready to go casa?`,
+        nextId: '15',
+      },
+      {
+        id: '15',
+        speaker: `${username}`,
+        text: `Thanks Dr. Bones! I'm ready, open the portal, please.`,
+        nextId: '16',
+      },
+      {
+        id: '16',
+        speaker: 'Dr. Bones',
+        text: `You're welcome ${username}, goodbye!`,
+        nextId: '17',
+      },
+      {
+        id: '17',
+        speaker: `${username}`,
+        text: `Goodbye Dr. Bones!`,
+        nextId: undefined,
       },
     ]
   },
