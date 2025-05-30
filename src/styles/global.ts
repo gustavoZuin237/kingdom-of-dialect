@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
-import PressStart2P from '../assets/fonts/PressStart2P-Regular.ttf';
-import PixelifySans from '../assets/fonts/PixelifySans.ttf'
+import PressStart2P from '/assets/fonts/PressStart2P-Regular.ttf';
+import PixelifySans from '/assets/fonts/PixelifySans.ttf'
 
 export const GlobalStyle = createGlobalStyle`
     @font-face {

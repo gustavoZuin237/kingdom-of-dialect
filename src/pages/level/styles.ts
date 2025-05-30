@@ -14,43 +14,43 @@ export const PageContainer = styled.div<LevelProps>`
         switch (level) {
             case 0:
                 return `
-                    background: url("src/assets/backgrounds/2.portal.png") no-repeat center;
+                    background: url("/assets/backgrounds/2.portal.png") no-repeat center;
                     background-size: cover;
                 `;
 
             case 1:
                 return `
-                    background: url("src/assets/backgrounds/3.casa_tia.png") no-repeat center;
+                    background: url("/assets/backgrounds/3.casa_tia.png") no-repeat center;
                     background-size: cover;
                 `;
 
             case 2:
                 return `
-                    background: url("src/assets/backgrounds/4.fazenda.png") no-repeat center;
+                    background: url("/assets/backgrounds/4.fazenda.png") no-repeat center;
                     background-size: cover;
                 `;
 
             case 3:
                 return `
-                    background: url("src/assets/backgrounds/5.mercado.png") no-repeat center;
+                    background: url("/assets/backgrounds/5.mercado.png") no-repeat center;
                     background-size: cover;
                 `;
 
             case 4:
                 return `
-                    background: url("src/assets/backgrounds/6.loja_roupa.png") no-repeat center;
+                    background: url("/assets/backgrounds/6.loja_roupa.png") no-repeat center;
                     background-size: cover;
                 `;
 
             case 5:
                 return `
-                    background: url("src/assets/backgrounds/7.computador.png") no-repeat center;
+                    background: url("/assets/backgrounds/7.computador.png") no-repeat center;
                     background-size: cover;
                 `;
 
             case 6:
                 return `
-                    background: url("src/assets/backgrounds/8.final_portal.png") no-repeat center;
+                    background: url("/assets/backgrounds/8.final_portal.png") no-repeat center;
                     background-size: cover;
                 `;
         
@@ -87,4 +87,12 @@ export const CharacterImageContainer = styled.div`
 
     display: flex;
     flex-direction: column;
+`
+
+export const ReloadWarning = styled.p`
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 1.15rem;
 `

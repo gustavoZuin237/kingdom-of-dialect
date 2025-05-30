@@ -18,7 +18,11 @@ interface DialogsI {
 
 export type Dialog = DialogLine[];
 
-const username = sessionStorage.getItem("username")
+let username = sessionStorage.getItem("username")
+
+if (username == null) {
+  username = 'Ferret'
+}
 
 export const dialogs : DialogsI[] = [
   {

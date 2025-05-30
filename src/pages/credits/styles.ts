@@ -8,7 +8,7 @@ export const PageContainer = styled.div`
     justify-content: center;
     padding: 2rem 4rem;
 
-    background: url("src/assets/backgrounds/9.creditos_jogo.png") no-repeat center;
+    background: url("/assets/backgrounds/9.creditos_jogo.png") no-repeat center;
     background-size: cover;
 `
 

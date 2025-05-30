@@ -9,31 +9,31 @@ export function CharacterImage({level} : CharacterImagePropsI) {
 
     switch (level) {
         case 0:
-            imageSrc = 'src/assets/characters/ferret.png'
+            imageSrc = '/assets/characters/ferret.png'
             break;
 
         case 1:
-            imageSrc = 'src/assets/characters/aunt_ferret.png'
+            imageSrc = '/assets/characters/aunt_ferret.png'
             break;
 
         case 2:
-            imageSrc = 'src/assets/characters/fox.png'
+            imageSrc = '/assets/characters/fox.png'
             break;
 
         case 3:
-            imageSrc = 'src/assets/characters/frog.png'
+            imageSrc = '/assets/characters/frog.png'
             break;
 
         case 4:
-            imageSrc = 'src/assets/characters/duck.png'
+            imageSrc = '/assets/characters/duck.png'
             break;
 
         case 5:
-            imageSrc = 'src/assets/characters/aunt_ferret.png'
+            imageSrc = '/assets/characters/aunt_ferret.png'
             break;
 
         case 6:
-            imageSrc = 'src/assets/characters/bones.png'
+            imageSrc = '/assets/characters/bones.png'
             break;
 
     

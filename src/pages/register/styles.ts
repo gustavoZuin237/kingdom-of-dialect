@@ -7,7 +7,7 @@ export const PageContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    background: url("src/assets/backgrounds/1.casa_start.png") no-repeat center;
+    background: url("/assets/backgrounds/1.casa_start.png") no-repeat center;
     background-size: cover;
 `
 

@@ -10,6 +10,6 @@ export const PageContainer = styled.div`
 
     padding: 2rem 4rem;
 
-    background: url("src/assets/backgrounds/start-screen.png") no-repeat center;
+    background: url("/assets/backgrounds/start-screen.png") no-repeat center;
     background-size: cover;
 `

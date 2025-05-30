@@ -19,7 +19,7 @@ export function Register() {
 
     return (
         <s.PageContainer>
-            <s.Image src='src/assets/logo/logo.png' />
+            <s.Image src='/assets/logo/logo.png' />
 
             <s.InputContainer>
                 <s.InputLabel>Nome do jogador</s.InputLabel>

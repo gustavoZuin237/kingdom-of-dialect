@@ -90,6 +90,13 @@ export function Level({ level } : LevelPropsI) {
                 :
                 <></>
             }
+
+            {
+                level == 0 ? 
+                    <s.ReloadWarning>Obs: Se o nome de usuário não carregar corretamente, por favor recarregue a página</s.ReloadWarning>
+                :
+                    <></>
+            }
         </s.PageContainer>
     )
 }
