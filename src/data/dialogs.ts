@@ -111,7 +111,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '10',
         speaker: 'Aunt Ferret',
-        text: 'Mother é mãe, sabia que em muitas linguas mãe começa com M? em inglês falamos mother para mãe e mom que seria mãe de um jeito mais próximo e intimo quando estamos falando com ela ou alguém que conhecemos e falando dela. Como você deve se referir a sua mãe quando conversar com o Dr. Bones?',
+        text: 'Mother é mãe, sabia que em muitas linguas mãe começa com M? Em inglês falamos mother para mãe e mom que seria mãe de um jeito mais próximo e intimo quando estamos falando com ela ou alguém que conhecemos e falando dela. Como você deve se referir a sua mãe quando conversar com o Dr. Bones?',
         nextId: '11',
       },
       {
@@ -123,7 +123,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '12',
         speaker: 'Aunt Ferret',
-        text: 'Isso, com pessoas mais formais precisamos falar de forma mai séria. Então se mother é mãe, father é pai, que também pode ser chamado carinhosamente de dad, o que seria pai em uma forma mais descontraída',
+        text: 'Isso, com pessoas mais formais precisamos falar de forma mais séria. Então se mother é mãe, father é pai, que também pode ser chamado carinhosamente de dad, o que seria pai em uma forma mais descontraída',
         nextId: '13',
       },
       {
@@ -141,7 +141,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '15',
         speaker: `${username}`,
-        text: 'Mother é mãe e father é pai, tia é aunt e nos somos ferrets',
+        text: 'Mother é mãe e father é pai, tia é aunt e nós somos ferrets',
         nextId: '16',
       },
       {
@@ -204,7 +204,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '24',
         speaker: 'Aunt Ferret',
-        text: 'Dad and mom está certo mas, você vai falar com alguém importante e precisamos usar um jeito mais formal com ele, portanto utilizamos father para pai e mother para mãe.',
+        text: 'Dad and mom está certo, mas você vai falar com alguém importante e precisamos usar um jeito mais formal com ele, portanto utilizamos father para pai e mother para mãe.',
         nextId: '25',
       },
       {
@@ -221,7 +221,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '1',
         speaker: 'Aunt Ferret',
-        text: 'Bem-vindo(a) a fazenda do Sr. Fox, em inglês chamamos fazenda de farm',
+        text: 'Bem-vindo(a) a fazenda do Sr. Fox! Em inglês chamamos fazenda de farm',
         nextId: '2',
       },
       {
@@ -273,67 +273,67 @@ export const dialogs : DialogsI[] = [
         nextId: '10',
       },
       {
-        id: '11',
+        id: '10',
         speaker: 'Aunt Ferret',
         text: `Vamos testar seu conhecimento ${username}. Com o que fazemos uma omelete ou uma gemada?`,
         choices: [
-          { text: 'Eggs', nextId: '12' },
-          { text: 'Chicken', nextId: '13' },
+          { text: 'Eggs', nextId: '11' },
+          { text: 'Chicken', nextId: '12' },
         ],
       },
       {
-        id: '12',
+        id: '11',
         speaker: 'Aunt Ferret',
         text: 'Sim, ovos servem para várias otimas receitas, doce e salgadas',
-        nextId: '14',
+        nextId: '13',
+      },
+      {
+        id: '12',
+        speaker: 'Sr. Fox',
+        text: 'Ops, acho que trocamos de ideias aqui. Chicken significa frango e com frango conseguimos fazer várias receitas, mas omelete não é uma delas...',
+        nextId: '13',
       },
       {
         id: '13',
-        speaker: 'Sr. Fox',
-        text: 'Ops, acho que trocamos de ideias aqui. Chicken significa frango e com frango conseguimos fazer várias receitas, mas omelete não é uma delas...',
-        nextId: '14',
+        speaker: 'Aunt Ferret',
+        text: 'Onde encontramos os melhores produtos animais? Use essa frase para te ajudar, só precisa completar com a última palavra: "On the ____"',
+        choices: [
+          { text: 'On the farm', nextId: '14' },
+          { text: 'On the far', nextId: '15' },
+        ],
       },
       {
         id: '14',
         speaker: 'Aunt Ferret',
-        text: 'Onde encontramos os melhores produtos animais? Use essa frase para te ajudar, só precisa completar com a última palavra: "On the ____"',
-        choices: [
-          { text: 'On the farm', nextId: '15' },
-          { text: 'On the far', nextId: '16' },
-        ],
+        text: 'Isso, agora você já sabe para onde vir quando quiser o alimento com a melhor qualidade',
+        nextId: '16',
       },
       {
         id: '15',
         speaker: 'Aunt Ferret',
-        text: 'Isso, agora você já sabe para onde vir quando quiser o alimento com a melhor qualidade',
-        nextId: '17',
+        text: 'Far tem outro significado em inglês, mesmo que seja uma palavra bem parecida. Precisamos analisar os pequenos detalhes para não cometermos erros nos dialogos',
+        nextId: '16',
       },
       {
         id: '16',
-        speaker: 'Aunt Ferret',
-        text: 'Far tem outro significado em inglês, mesmo que seja uma palavra bem parecida. Precisamos analisar os pequenos detalhes para não cometermos erros nos dialogos',
+        speaker: 'Sr. Fox',
+        text: 'Aqui estão os ovos e frango, Aunt Ferret. Bye bye!',
         nextId: '17',
       },
       {
         id: '17',
-        speaker: 'Sr. Fox',
-        text: 'Aqui estão os ovos e frango, Aunt Ferret. Bye bye!',
+        speaker: 'Aunt Ferret',
+        text: `Thank you Mr. Fox, take care. Diga "bye" para o Sr. Fox ${username}, isso significa "tchau"`,
         nextId: '18',
       },
       {
         id: '18',
-        speaker: 'Aunt Ferret',
-        text: `Muito obrigada Sr. Fox, take care. Diga "bye" para o Sr. Fox ${username}, isso significa "tchau"`,
+        speaker: `${username}`,
+        text: 'Bye bye Sr. Fox!',
         nextId: '19',
       },
       {
         id: '19',
-        speaker: `${username}`,
-        text: 'Bye bye Sr. Fox!',
-        nextId: '20',
-      },
-      {
-        id: '20',
         speaker: 'Aunt Ferret',
         text: `Muito bem ${username}!`,
         nextId: undefined,
@@ -394,7 +394,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '9',
         speaker: 'Aunt Ferret',
-        text: '“Ele também não te entende, é uma pena. Mas agradeça ele pela compra, diga obrigado pelo que você comprou, começando com ”Thanks for...',
+        text: 'Ele também não te entende, é uma pena. Mas agradeça ele pela compra, diga obrigado pelo que você comprou, começando com ”Thanks for...',
         choices: [
           { text: 'Thanks for the grapes and milk, Frog Jr', nextId: '11' },
           { text: 'Thanks for the Frog Jr, grapes', nextId: '12' },
@@ -463,112 +463,112 @@ export const dialogs : DialogsI[] = [
         nextId: '4',
       },
       {
-        id: '5',
+        id: '4',
         speaker: 'Ms. Duck',
         text: 'Welcome to my clothing store!',
+        nextId: '5',
+      },
+      {
+        id: '5',
+        speaker: `${username}`,
+        text: 'Hello! I don’t understand English',
         nextId: '6',
       },
       {
         id: '6',
-        speaker: `${username}`,
-        text: 'Hello! I don’t understand English',
+        speaker: 'Ms. Duck',
+        text: 'Ah sim, entendi! O que você gostaria de vestir hoje?',
         nextId: '7',
       },
       {
         id: '7',
-        speaker: 'Ms. Duck',
-        text: 'Ah sim, entendi! O que você gostaria de vestir hoje?',
+        speaker: `${username}`,
+        text: 'Minha tia gostou de um vestido, eu gostei desta bermuda, como posso pedir essas peças em inglês?',
         nextId: '8',
       },
       {
         id: '8',
-        speaker: `${username}`,
-        text: 'Minha tia gostou de um vestido, eu gostei desta bermuda, como posso pedir essas peças em inglês?',
+        speaker: 'Ms. Duck',
+        text: 'Bom, vestido se diz "dress" em inglês, e bermudas são chamadas "shorts"',
         nextId: '9',
       },
       {
         id: '9',
-        speaker: 'Ms. Duck',
-        text: 'Bom, vestido se diz "dress" em inglês, e bermudas são chamadas "shorts"',
+        speaker: `${username}`,
+        text: 'Dress and shorts, vestido e bermuda. Entendi!',
         nextId: '10',
       },
       {
         id: '10',
-        speaker: `${username}`,
-        text: 'Dress and shorts, vestido e bermuda. Entendi!',
-        nextId: '11',
+        speaker: 'Ms. Duck',
+        text: 'Isso! Agora me diga o que você vai querer levar, antes do nome da peça diga "I’ll take the...":',
+        choices: [
+          { text: 'I’ll take the shorts', nextId: '11' },
+          { text: 'I’ll take the dress', nextId: '12' },
+        ],
       },
       {
         id: '11',
         speaker: 'Ms. Duck',
-        text: 'Isso! Agora me diga o que você vai querer levar, antes do nome da peça diga "I’ll take the...":',
-        choices: [
-          { text: 'I’ll take the shorts', nextId: '12' },
-          { text: 'I’ll take the dress', nextId: '13' },
-        ],
+        text: 'Ótimo! Vamos pegar um "shorts" para você',
+        nextId: '13',
       },
       {
         id: '12',
         speaker: 'Ms. Duck',
-        text: 'Ótimo! Vamos pegar um “shorts” para você',
-        nextId: '14',
+        text: 'Vai ter que brigar com sua tia pelo vestido hahaha!',
+        nextId: '13',
       },
       {
         id: '13',
         speaker: 'Ms. Duck',
-        text: 'Vai ter que brigar com sua tia pelo vestido hahaha!',
-        nextId: '14',
+        text: 'E agora, o que sua tia irá levar? Diga "she chose the..." antes do nome da roupa',
+        choices: [
+          { text: 'She chose the dress', nextId: '14' },
+          { text: 'She chose the shorts', nextId: '15' },
+        ],
       },
       {
         id: '14',
         speaker: 'Ms. Duck',
-        text: 'E agora, o que sua tia irá levar? Diga "she chose the..." antes do nome da roupa',
-        choices: [
-          { text: 'She chose the dress', nextId: '15' },
-          { text: 'She chose the shorts', nextId: '16' },
-        ],
+        text: 'Ótimo! Vamos pegar o "dress" para ela',
+        nextId: '16',
       },
       {
         id: '15',
         speaker: 'Ms. Duck',
-        text: 'Ótimo! Vamos pegar o "dress" para ela',
-        nextId: '17',
+        text: 'Ops, acho que você quis dizer que ela gostou mais do vestido. Vestido em inglês é "dress"',
+        nextId: '16',
       },
       {
         id: '16',
-        speaker: 'Ms. Duck',
-        text: 'Ops, acho que você quis dizer que ela gostou mais do vestido. Vestido em inglês é "dress"',
-        nextId: '17',
+        speaker: 'Aunt Ferret',
+        text: 'Bom trabalho, agora agradeça e diga adeus a Miss Duck',
+        choices: [
+          { text: 'Goodbye Ms. Duck!', nextId: '17' },
+          { text: 'Goodbye Sr. Duck', nextId: '18' },
+        ],
       },
       {
         id: '17',
         speaker: 'Aunt Ferret',
-        text: 'Bom trabalho, agora agradeça e diga adeus a Miss Duck',
-        choices: [
-          { text: 'Goodbye Ms. Duck!', nextId: '18' },
-          { text: 'Goodbye Sr. Duck', nextId: '19' },
-        ],
+        text: 'Ela adorou você! Agora vamos para casa comer',
+        nextId: '19',
       },
       {
         id: '18',
         speaker: 'Aunt Ferret',
-        text: 'Ela adorou você! Agora vamos para casa comer',
-        nextId: '20',
+        text: 'Ms. é uma referência a damas como a Ms. Duck, Sr. é uma referência a senhores, então podemos usar com o Sr. Fox ou até com Frog Jr, por exemplo, mas não com a Ms. Duck.',
+        nextId: '19',
       },
       {
         id: '19',
         speaker: 'Aunt Ferret',
-        text: 'Ms. é uma referência a damas como a Ms. Duck, Sr. é uma referência a senhores, então podemos usar com o Sr. Fox ou até com Frog Jr, por exemplo, mas não com a Ms. Duck.',
+        text: 'Well, bye bye Ms. Duck. Thank you for the clothes',
         nextId: '20',
       },
       {
         id: '20',
-        speaker: 'Aunt Ferret',
-        text: 'Well, bye bye Ms. Duck. Thank you for the clothes',
-        nextId: '21',
-      },
-      {
-        id: '21',
         speaker: 'Ms. Duck',
         text: 'Bye ferrets!',
         nextId: undefined,
@@ -599,7 +599,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '4',
         speaker: `${username}`,
-        text: 'Queridos Father and Mother, hoje vim visitar Aunt Ferret sem querer, porque cai em um buraco estranho e acabei em um lugar em que falam outra lingua. Aprendi muitas coisas, por exemplo posso chamar a mamãe de mom ou mother, o papai de dad ou father. Estou com muita saudade e mal posso esperar para voltar para casa!',
+        text: 'Queridos Father and Mother, hoje vim visitar Aunt Ferret sem querer, porque cai em um buraco estranho e acabei em um lugar em que falam outra língua. Aprendi muitas coisas, por exemplo posso chamar a mamãe de mom ou mother e o papai de dad ou father. Estou com muita saudade e mal posso esperar para voltar para casa!',
         nextId: '5'
       },
       {
@@ -655,7 +655,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '3',
         speaker: `${username}`,
-        text: 'Obrigado por tudo Aunt Ferret, não teria conseguido sem você! Eu vou para casa e vou contar tudo que fizessemos para os meus pais!',
+        text: 'Obrigado por tudo Aunt Ferret, não teria conseguido sem você! Eu vou para casa e vou contar tudo que fizemos para os meus pais!',
         nextId: '4',
       },
       {
@@ -703,7 +703,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '10',
         speaker: 'Dr. Bones',
-        text: `Your ferret? But você é um ferret. Let's go back to the começo, pay attention to my perguntas!`,
+        text: `Your ferret? But você é um ferret. Let's go back to the começo, pay attention to my pergunta!`,
         nextId: '8',
       },
       {
@@ -730,7 +730,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '14',
         speaker: 'Dr. Bones',
-        text: `I'm happy to know you had fun and gostou do kingdom. Ready to go casa?`,
+        text: `I'm happy to know you had fun and gostou do kingdom. Ready to go home?`,
         nextId: '15',
       },
       {
