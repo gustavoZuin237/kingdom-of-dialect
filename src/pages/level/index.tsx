@@ -44,7 +44,7 @@ export function Level({ level } : LevelPropsI) {
                 <CharacterImage level={0} />
 
                 {
-                    level >= 2 ? (
+                    level >= 2 && level !== 5 ? (
                         <CharacterImage level={1} />
                     )
                     :
