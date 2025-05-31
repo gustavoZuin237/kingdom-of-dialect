@@ -78,7 +78,7 @@ export const ButtonContainer = styled(NavLink)<ButtonProps>`
         }}
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 960px) {
         height: 3rem;
         font-size: 1.25rem;
         padding: 0.75rem;

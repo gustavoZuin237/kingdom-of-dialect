@@ -75,8 +75,10 @@ export const ContentContainer = styled.div`
 
     @media (max-width: 700px) {
         max-width: 100%;
-        margin-top: auto;
         margin-inline: auto;
+        margin-top: auto;
+        margin-bottom: 5rem;
+        bottom: 5rem;
     }
 `
 
@@ -95,4 +97,5 @@ export const ReloadWarning = styled.p`
     left: 10px;
     font-weight: bold;
     font-size: 1.15rem;
+    margin-top: 2rem;
 `

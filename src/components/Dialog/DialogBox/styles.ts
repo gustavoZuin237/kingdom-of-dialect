@@ -14,6 +14,7 @@ export const DialogBoxContainer = styled.div`
     padding: 1.5rem;
 
     @media (max-width: 800px) {
+      height: auto;
       padding: 0.8rem;
     }
 `
@@ -28,7 +29,7 @@ export const Text = styled.div`
   font-size: 1.3rem;
   color: ${(props) => props.theme['black']};
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     font-size: 1rem;
   }
 `
