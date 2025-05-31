@@ -77,8 +77,7 @@ export const ContentContainer = styled.div`
         max-width: 100%;
         margin-inline: auto;
         margin-top: auto;
-        margin-bottom: 5rem;
-        bottom: 5rem;
+        margin-bottom: 50%;
     }
 `
 
