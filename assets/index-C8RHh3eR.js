@@ -174,7 +174,7 @@ Error generating stack: `+l.message+`
                 `}
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 960px) {
         height: 3rem;
         font-size: 1.25rem;
         padding: 0.75rem;
@@ -312,8 +312,10 @@ Error generating stack: `+l.message+`
 
     @media (max-width: 700px) {
         max-width: 100%;
-        margin-top: auto;
         margin-inline: auto;
+        margin-top: auto;
+        margin-bottom: 5rem;
+        bottom: 5rem;
     }
 `,ec=b.div`
     width: 10%;
@@ -328,6 +330,7 @@ Error generating stack: `+l.message+`
     left: 10px;
     font-weight: bold;
     font-size: 1.15rem;
+    margin-top: 2rem;
 `,ey=b.div`
     width: 100%;
     height: auto;
@@ -356,6 +359,7 @@ Error generating stack: `+l.message+`
     padding: 1.5rem;
 
     @media (max-width: 800px) {
+      height: auto;
       padding: 0.8rem;
     }
 `,ry=b.div`
@@ -366,7 +370,7 @@ Error generating stack: `+l.message+`
   font-size: 1.3rem;
   color: ${e=>e.theme.black};
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     font-size: 1rem;
   }
 `,ly=b.div`
