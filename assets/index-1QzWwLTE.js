@@ -333,7 +333,7 @@ Error generating stack: `+l.message+`
     justify-content: center;
 `,ty=b.img`
     width: 100%;
-`;function xi({level:e}){let t="";switch(e){case 0:t="/assets/characters/ferret.png";break;case 1:t="/assets/characters/aunt_ferret.png";break;case 2:t="/assets/characters/fox.png";break;case 3:t="/assets/characters/frog.png";break;case 4:t="/assets/characters/duck.png";break;case 5:t="/assets/characters/aunt_ferret.png";break;case 6:t="/assets/characters/bones.png";break}return S.jsx(ey,{children:S.jsx(ty,{src:t})})}const ny=b.div`
+`;function xi({level:e}){let t="";switch(e){case 0:t="/kingdom-of-dialect/assets/characters/ferret.png";break;case 1:t="/kingdom-of-dialect/assets/characters/aunt_ferret.png";break;case 2:t="/kingdom-of-dialect/assets/characters/fox.png";break;case 3:t="/kingdom-of-dialect/assets/characters/frog.png";break;case 4:t="/kingdom-of-dialect/assets/characters/duck.png";break;case 5:t="/kingdom-of-dialect/assets/characters/aunt_ferret.png";break;case 6:t="/kingdom-of-dialect/assets/characters/bones.png";break}return S.jsx(ey,{children:S.jsx(ty,{src:t})})}const ny=b.div`
     width: 100%;
     height: 100%;
 
