@@ -183,7 +183,7 @@ Error generating stack: `+l.message+`
 
     padding: 2rem 4rem;
 
-    background: url(${"/kingdom-of-dialect/"}/assets/backgrounds/start-screen.png) no-repeat center;
+    background: url(${"/kingdom-of-dialect/"}assets/backgrounds/start-screen.png) no-repeat center;
     background-size: cover;
 `;function Bv(){return S.jsx(Uv,{children:S.jsx(Gn,{variant:"white",link:"/register",clickFunction:()=>{},children:"START"})})}const Wv=b.div`
     height: 100vh;
