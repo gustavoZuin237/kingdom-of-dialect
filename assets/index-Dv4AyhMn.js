@@ -175,7 +175,7 @@ Error generating stack: `+l.message+`
     }
 
     @media (max-width: 960px) {
-        height: 3rem;
+        height: 2rem;
         font-size: 1.25rem;
         padding: 0.75rem;
     }
@@ -314,8 +314,7 @@ Error generating stack: `+l.message+`
         max-width: 100%;
         margin-inline: auto;
         margin-top: auto;
-        margin-bottom: 5rem;
-        bottom: 5rem;
+        margin-bottom: 50%;
     }
 `,ec=b.div`
     width: 10%;
