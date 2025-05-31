@@ -14,7 +14,7 @@ document.title = "K.O.D | Kingdom of Dialect";
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <BrowserRouter>
+      <BrowserRouter basename="/kingdom-of-dialect">
         <Router />
        </BrowserRouter>
         
