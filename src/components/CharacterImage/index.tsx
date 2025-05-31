@@ -9,31 +9,31 @@ export function CharacterImage({level} : CharacterImagePropsI) {
 
     switch (level) {
         case 0:
-            imageSrc = '/assets/characters/ferret.png'
+            imageSrc = `${import.meta.env.BASE_URL}assets/characters/ferret.png`
             break;
 
         case 1:
-            imageSrc = '/assets/characters/aunt_ferret.png'
+            imageSrc = `${import.meta.env.BASE_URL}assets/characters/aunt_ferret.png`
             break;
 
         case 2:
-            imageSrc = '/assets/characters/fox.png'
+            imageSrc = `${import.meta.env.BASE_URL}assets/characters/fox.png`
             break;
 
         case 3:
-            imageSrc = '/assets/characters/frog.png'
+            imageSrc = `${import.meta.env.BASE_URL}assets/characters/frog.png`
             break;
 
         case 4:
-            imageSrc = '/assets/characters/duck.png'
+            imageSrc = `${import.meta.env.BASE_URL}assets/characters/duck.png`
             break;
 
         case 5:
-            imageSrc = '/assets/characters/aunt_ferret.png'
+            imageSrc = `${import.meta.env.BASE_URL}assets/characters/aunt_ferret.png`
             break;
 
         case 6:
-            imageSrc = '/assets/characters/bones.png'
+            imageSrc = `${import.meta.env.BASE_URL}assets/characters/bones.png`
             break;
 
     

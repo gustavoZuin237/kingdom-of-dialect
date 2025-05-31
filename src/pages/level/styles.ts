@@ -14,43 +14,43 @@ export const PageContainer = styled.div<LevelProps>`
         switch (level) {
             case 0:
                 return `
-                    background: url("/assets/backgrounds/2.portal.png") no-repeat center;
+                    background: url(${import.meta.env.BASE_URL}assets/backgrounds/2.portal.png) no-repeat center;
                     background-size: cover;
                 `;
 
             case 1:
                 return `
-                    background: url("/assets/backgrounds/3.casa_tia.png") no-repeat center;
+                    background: url(${import.meta.env.BASE_URL}assets/backgrounds/3.casa_tia.png) no-repeat center;
                     background-size: cover;
                 `;
 
             case 2:
                 return `
-                    background: url("/assets/backgrounds/4.fazenda.png") no-repeat center;
+                    background: url(${import.meta.env.BASE_URL}assets/backgrounds/4.fazenda.png) no-repeat center;
                     background-size: cover;
                 `;
 
             case 3:
                 return `
-                    background: url("/assets/backgrounds/5.mercado.png") no-repeat center;
+                    background: url(${import.meta.env.BASE_URL}assets/backgrounds/5.mercado.png) no-repeat center;
                     background-size: cover;
                 `;
 
             case 4:
                 return `
-                    background: url("/assets/backgrounds/6.loja_roupa.png") no-repeat center;
+                    background: url(${import.meta.env.BASE_URL}assets/backgrounds/6.loja_roupa.png) no-repeat center;
                     background-size: cover;
                 `;
 
             case 5:
                 return `
-                    background: url("/assets/backgrounds/7.computador.png") no-repeat center;
+                    background: url(${import.meta.env.BASE_URL}assets/backgrounds/7.computador.png) no-repeat center;
                     background-size: cover;
                 `;
 
             case 6:
                 return `
-                    background: url("/assets/backgrounds/8.final_portal.png") no-repeat center;
+                    background: url(${import.meta.env.BASE_URL}assets/backgrounds/8.final_portal.png) no-repeat center;
                     background-size: cover;
                 `;
         
