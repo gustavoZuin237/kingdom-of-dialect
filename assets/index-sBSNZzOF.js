@@ -237,7 +237,7 @@ Error generating stack: `+l.message+`
     font-weight: bold;
     text-align: center;
     line-height: 1.6;
-`;function Kv(){const[e,t]=P.useState("");function n(o){t(o.target.value)}function r(){e!==""&&sessionStorage.setItem("username",e)}return S.jsxs(Wv,{children:[S.jsx(Vv,{src:"/assets/logo/logo.png"}),S.jsxs(Hv,{children:[S.jsx(qv,{children:"Nome do jogador"}),S.jsx(Qv,{type:"text",placeholder:"Insira seu nome de jogador...",value:e,onChange:n})]}),e!==""?S.jsx(Gn,{variant:"white",clickFunction:r,link:"/level0",children:"NEXT"}):S.jsx(Gn,{disabled:!0,variant:"white",clickFunction:r,link:"",children:"NEXT"})]})}const Gv=b.div`
+`;function Kv(){const[e,t]=P.useState("");function n(o){t(o.target.value)}function r(){e!==""&&sessionStorage.setItem("username",e)}return S.jsxs(Wv,{children:[S.jsx(Vv,{src:"/kingdom-of-dialect/assets/logo/logo.png"}),S.jsxs(Hv,{children:[S.jsx(qv,{children:"Nome do jogador"}),S.jsx(Qv,{type:"text",placeholder:"Insira seu nome de jogador...",value:e,onChange:n})]}),e!==""?S.jsx(Gn,{variant:"white",clickFunction:r,link:"/level0",children:"NEXT"}):S.jsx(Gn,{disabled:!0,variant:"white",clickFunction:r,link:"",children:"NEXT"})]})}const Gv=b.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
