@@ -13,7 +13,7 @@ export const DialogBoxContainer = styled.div`
     font-size: 0.8rem;
     padding: 1.5rem;
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       padding: 0.8rem;
     }
 `
@@ -27,6 +27,10 @@ export const Speaker = styled.div`
 export const Text = styled.div`
   font-size: 1.3rem;
   color: ${(props) => props.theme['black']};
+
+  @media (max-width: 800px) {
+    font-size: 1rem;
+  }
 `
 
 export const ButtonContainer = styled.div`
@@ -35,4 +39,8 @@ export const ButtonContainer = styled.div`
   margin-top: 1rem;
   gap: 0.75rem;
   flex-wrap: wrap;
+
+  @media (max-width: 800px) {
+    gap: 0.25rem;
+  }
 `

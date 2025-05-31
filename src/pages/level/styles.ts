@@ -73,9 +73,9 @@ export const ContentContainer = styled.div`
     justify-content: center;
     margin-inline: auto;
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
         max-width: 100%;
-        margin-top: 50%;
+        margin-top: auto;
         margin-inline: auto;
     }
 `

@@ -12,7 +12,9 @@ export const PageContainer = styled.div`
 `
 
 export const Image = styled.img`
-    height: 35%;
+    width: 30%;
+    height: 30%;
+    min-width: 300px;
     margin-bottom: 2rem;
 `
 
@@ -48,6 +50,7 @@ export const Input = styled.input`
 
     &::placeholder {
         color: ${(props) => props.theme['black']};
+        font-size: 0.8rem;
     }
 
     &:focus {
@@ -56,7 +59,7 @@ export const Input = styled.input`
 `
 
 export const InputLabel = styled.h1`
-    font-size: 2vw;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     line-height: 1.6;
