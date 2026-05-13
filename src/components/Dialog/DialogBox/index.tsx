@@ -4,6 +4,8 @@ import { DialogChoice } from '../../../data/dialogs';
 
 import { Button } from '../../Button';
 
+import { useState } from 'react';
+
 type DialogBoxProps = {
   speaker: string;
   text: string;
@@ -18,6 +20,18 @@ export function DialogBox({ speaker, text, choices, onNext, onChoice, visible } 
         return null
     }
 
+    const [username] = useState(() => {
+        return localStorage.getItem('username') || 'Ferret';
+    });
+
+    if (speaker == 'player') {
+        speaker = username;
+    }
+
+    if (text.includes('{username}')) {
+        text = text.replace('{username}', username);
+    }
+
     return (
         <s.DialogBoxContainer>
                 <s.Speaker>{speaker}</s.Speaker>
@@ -28,7 +42,6 @@ export function DialogBox({ speaker, text, choices, onNext, onChoice, visible } 
                         choices && choices.length > 0 ? (
                             choices.map((choice) => (
                                 <Button
-                                    key={choice.text}
                                     variant='black-outline'
                                     clickFunction={() => onChoice(choice.nextId)}
                                 >

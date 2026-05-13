@@ -18,19 +18,13 @@ interface DialogsI {
 
 export type Dialog = DialogLine[];
 
-let username = sessionStorage.getItem("username")
-
-if (username == null) {
-  username = 'Ferret'
-}
-
 export const dialogs : DialogsI[] = [
   {
     level: 0,
     dialogLines: [
       {
         id: '1',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Tenho um projeto importante para a escola amanhã, preciso de algumas folhas para decorar meu trabalho: folhas verdes, flores amarelas, talvez algumas pedras... mas as pedras têm cor feia. O que posso levar no lugar?',
         choices: [
           { text: 'Flores!', nextId: '2' },
@@ -39,13 +33,13 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '2',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Agora sim, meu trabalho vai ficar ótimo! Acho que vou levar um desses cogumelos vermelhos!',
         nextId: '3',
       },
       {
         id: '3',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Espera aí, de onde surgiu esse buraco? Que estranho... O que será que tem dentro dele?',
         nextId: undefined,
       }
@@ -57,12 +51,12 @@ export const dialogs : DialogsI[] = [
       {
         id: '1',
         speaker: `Aunt Ferret`,
-        text: `${username}? O que você está fazendo aqui?`,
+        text: `{username}? O que você está fazendo aqui?`,
         nextId: '2',
       },
       {
         id: '2',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Tia? Estava buscando coisas para minha lição e caí em um buraco colorido quando fui pegar um cogumelo vermelho',
         nextId: '3',
       },
@@ -86,7 +80,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '6',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'E como eu vou falar com ele se ele não me entende, você vai falar por mim?',
         nextId: '7',
       },
@@ -98,7 +92,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '8',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Eles vão me entender?',
         nextId: '9',
       },
@@ -116,7 +110,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '11',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Mother, porque eu não conheço ele.',
         nextId: '12',
       },
@@ -128,7 +122,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '13',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Se mother é mãe e father é pai, como se diz "tia" em inglês?',
         nextId: '14',
       },
@@ -140,7 +134,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '15',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Mother é mãe e father é pai, tia é aunt e nós somos ferrets',
         nextId: '16',
       },
@@ -171,7 +165,7 @@ export const dialogs : DialogsI[] = [
         text: 'Quando as pessoas me chamarem de Aunt Ferret, o que isso quer dizer?',
         choices: [
           { text: 'Tia Furão', nextId: '20' },
-          { text: `Tia do(a) ${username}`, nextId: '21' },
+          { text: `Tia do(a) {username}`, nextId: '21' },
         ],
       },
       {
@@ -233,7 +227,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '3',
         speaker: 'Aunt Ferret',
-        text: `Hello Mr. Fox! I'm doing great, thank you for asking. This is ${username}, they came to see me. They don’t speak English, can you help them?`,
+        text: `Hello Mr. Fox! I'm doing great, thank you for asking. This is {username}, they came to see me. They don’t speak English, can you help them?`,
         nextId: '4',
       },
       {
@@ -244,7 +238,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '5',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Minha tia disse que aqui é uma fazenda, que se chama farm em inglês.',
         nextId: '6',
       },
@@ -257,25 +251,25 @@ export const dialogs : DialogsI[] = [
       {
         id: '7',
         speaker: 'Aunt Ferret',
-        text: `Ovos e frango. Vamos lá ${username}, diga a ele que precisamos de eggs and chicken`,
+        text: `Ovos e frango. Vamos lá {username}, diga a ele que precisamos de eggs and chicken`,
         nextId: '8',
       },
       {
         id: '8',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Precisamos de eggs and chicken Sr. Fox, vamos fazer um jantar',
         nextId: '9',
       },
       {
         id: '9',
         speaker: 'Sr. Fox',
-        text: `Que legal ${username}, então vocês querem ovos e frango para jantar. Vou separar os produtos para vocês agora mesmo!`,
+        text: `Que legal {username}, então vocês querem ovos e frango para jantar. Vou separar os produtos para vocês agora mesmo!`,
         nextId: '10',
       },
       {
         id: '10',
         speaker: 'Aunt Ferret',
-        text: `Vamos testar seu conhecimento ${username}. Com o que fazemos uma omelete ou uma gemada?`,
+        text: `Vamos testar seu conhecimento {username}. Com o que fazemos uma omelete ou uma gemada?`,
         choices: [
           { text: 'Eggs', nextId: '11' },
           { text: 'Chicken', nextId: '12' },
@@ -323,19 +317,19 @@ export const dialogs : DialogsI[] = [
       {
         id: '17',
         speaker: 'Aunt Ferret',
-        text: `Thank you Mr. Fox, take care. Diga "bye" para o Sr. Fox ${username}, isso significa "tchau"`,
+        text: `Thank you Mr. Fox, take care. Diga "bye" para o Sr. Fox {username}, isso significa "tchau"`,
         nextId: '18',
       },
       {
         id: '18',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Bye bye Sr. Fox!',
         nextId: '19',
       },
       {
         id: '19',
         speaker: 'Aunt Ferret',
-        text: `Muito bem ${username}!`,
+        text: `Muito bem {username}!`,
         nextId: undefined,
       },
     ]
@@ -351,7 +345,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '2',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Milk and grapes, leite e uvas',
         nextId: '3',
       },
@@ -369,7 +363,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '5',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Hello, I need milk and grapes, please.',
         nextId: '6'
       },
@@ -382,7 +376,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '7',
         speaker: 'Aunt Ferret',
-        text: `Hi Frog Jr, this is ${username}, they don't understand everything in English yet, just Portuguese, so be patient.`,
+        text: `Hi Frog Jr, this is {username}, they don't understand everything in English yet, just Portuguese, so be patient.`,
         nextId: '8',
       },
       {
@@ -409,7 +403,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '12',
         speaker: 'Aunt Ferret',
-        text: `Parece que você se confundiu ${username} haha! Você agradeceu as uvas pelo Frog Jr, invés de agradecer o Frog Jr pelas uvas`,
+        text: `Parece que você se confundiu {username} haha! Você agradeceu as uvas pelo Frog Jr, invés de agradecer o Frog Jr pelas uvas`,
         nextId: '13',
       },
       {
@@ -424,7 +418,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '14',
         speaker: 'Aunt Ferret',
-        text: `Isso ${username}, acertou. Agora pegue as sacolas e vamos para casa`,
+        text: `Isso {username}, acertou. Agora pegue as sacolas e vamos para casa`,
         nextId: '16',
       },
       {
@@ -447,12 +441,12 @@ export const dialogs : DialogsI[] = [
       {
         id: '1',
         speaker: 'Aunt Ferret',
-        text: `Sabe ${username}, pensei em ir direto para casa mas olha que lindos vestidos a loja da Miss Duck tem! Vamos entrar e ver um pouco mais.`,
+        text: `Sabe {username}, pensei em ir direto para casa mas olha que lindos vestidos a loja da Miss Duck tem! Vamos entrar e ver um pouco mais.`,
         nextId: '2'
       },
       {
         id: '2',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Ok, como se chama essa loja?',
         nextId: '3',
       },
@@ -470,7 +464,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '5',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Hello! I don’t understand English',
         nextId: '6',
       },
@@ -482,7 +476,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '7',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Minha tia gostou de um vestido, eu gostei desta bermuda, como posso pedir essas peças em inglês?',
         nextId: '8',
       },
@@ -494,7 +488,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '9',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Dress and shorts, vestido e bermuda. Entendi!',
         nextId: '10',
       },
@@ -580,7 +574,7 @@ export const dialogs : DialogsI[] = [
     dialogLines: [
       {
         id: '1',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Aunt, agora que já preparamos o jantar, podemos mandar uma mesagem para Father Ferret e Mother Ferret? Eles devem estar preocupados.',
         nextId: '2',
       },
@@ -598,7 +592,7 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '4',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Queridos Father and Mother, hoje vim visitar Aunt Ferret sem querer, porque cai em um buraco estranho e acabei em um lugar em que falam outra língua. Aprendi muitas coisas, por exemplo posso chamar a mamãe de mom ou mother e o papai de dad ou father. Estou com muita saudade e mal posso esperar para voltar para casa!',
         nextId: '5'
       },
@@ -611,7 +605,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '6',
         speaker: 'Aunt Ferret',
-        text: `Se sente pronto(a) para encontrar o Dr. Bones e ir para casa ${username}?`,
+        text: `Se sente pronto(a) para encontrar o Dr. Bones e ir para casa {username}?`,
         choices: [
           { text: 'Não, estou com medo...', nextId: '7' },
           { text: 'Sim! Mal posso esperar, vou arrebentar.', nextId: '8' },
@@ -643,18 +637,18 @@ export const dialogs : DialogsI[] = [
       {
         id: '1',
         speaker: 'Aunt Ferret',
-        text: `Aqui estamos ${username}, o Dr. Bones está te esperando logo a frente, mas você vai precisar conversar com ele sem ajuda. Seja educado e faça seu melhor para entendê-lo.`,
+        text: `Aqui estamos {username}, o Dr. Bones está te esperando logo a frente, mas você vai precisar conversar com ele sem ajuda. Seja educado e faça seu melhor para entendê-lo.`,
         nextId: '2',
       },
       {
         id: '2',
         speaker: 'Aunt Ferret',
-        text: `Ele só fala inglês, mas talvez tente falar um pouco de Português para que você entenda melhor. Eu acredito em você ${username}, vai lá!`,
+        text: `Ele só fala inglês, mas talvez tente falar um pouco de Português para que você entenda melhor. Eu acredito em você {username}, vai lá!`,
         nextId: '3',
       },
       {
         id: '3',
-        speaker: `${username}`,
+        speaker: 'player',
         text: 'Obrigado por tudo Aunt Ferret, não teria conseguido sem você! Eu vou para casa e vou contar tudo que fizemos para os meus pais!',
         nextId: '4',
       },
@@ -672,8 +666,8 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '6',
-        speaker: `${username}`,
-        text: `No, I'm ${username}.`,
+        speaker: 'player',
+        text: `No, I'm {username}.`,
         nextId: '7',
       },
       {
@@ -697,7 +691,7 @@ export const dialogs : DialogsI[] = [
       {
         id: '9',
         speaker: 'Dr. Bones',
-        text: `Ok ${username}, you want to go home. But antes, let's talk about seu dia no kingdom.`,
+        text: `Ok {username}, you want to go home. But antes, let's talk about seu dia no kingdom.`,
         nextId: '11',
       },
       {
@@ -735,19 +729,19 @@ export const dialogs : DialogsI[] = [
       },
       {
         id: '15',
-        speaker: `${username}`,
+        speaker: 'player',
         text: `Thanks Dr. Bones! I'm ready, open the portal, please.`,
         nextId: '16',
       },
       {
         id: '16',
         speaker: 'Dr. Bones',
-        text: `You're welcome ${username}, goodbye!`,
+        text: `You're welcome {username}, goodbye!`,
         nextId: '17',
       },
       {
         id: '17',
-        speaker: `${username}`,
+        speaker: 'player',
         text: `Goodbye Dr. Bones!`,
         nextId: undefined,
       },
