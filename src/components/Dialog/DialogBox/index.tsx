@@ -20,8 +20,9 @@ export function DialogBox({ speaker, text, choices, onNext, onChoice, visible } 
         return null
     }
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [username] = useState(() => {
-        return localStorage.getItem('username') || 'Ferret';
+        return sessionStorage.getItem("username") || "Jogador";
     });
 
     if (speaker == 'player') {
@@ -42,6 +43,7 @@ export function DialogBox({ speaker, text, choices, onNext, onChoice, visible } 
                         choices && choices.length > 0 ? (
                             choices.map((choice) => (
                                 <Button
+                                    key={choice.text}
                                     variant='black-outline'
                                     clickFunction={() => onChoice(choice.nextId)}
                                 >
