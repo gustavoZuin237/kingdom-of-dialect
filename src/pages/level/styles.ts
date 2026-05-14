@@ -89,12 +89,3 @@ export const CharacterImageContainer = styled.div`
     display: flex;
     flex-direction: column;
 `
-
-export const ReloadWarning = styled.p`
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-weight: bold;
-    font-size: 1.15rem;
-    margin-top: 2rem;
-`
